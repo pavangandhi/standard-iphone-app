@@ -41,7 +41,7 @@
     CategoriesView *categoriesView = [CategoriesView new];
     UINavigationController *ncCategoriesView = [[UINavigationController alloc] initWithRootViewController:categoriesView];
     ncCategoriesView.title = @"Test1";
-
+    
     CategoriesView *categoriesView2 = [CategoriesView new];
     UINavigationController *ncCategoriesView2 = [[UINavigationController alloc] initWithRootViewController:categoriesView2];
     ncCategoriesView2.title = @"Test2"; 
@@ -49,6 +49,12 @@
     self.tabbarController = [[UITabBarController alloc] init];
     self.tabbarController.viewControllers = [NSArray arrayWithObjects:ncCategoriesView,ncCategoriesView2,nil];
     [self.window addSubview:[self.tabbarController view]];
+    
+    [ncCategoriesView release];
+    [ncCategoriesView2 release];
+    [categoriesView2 release];
+    [categoriesView release];
+    
 }
 
 

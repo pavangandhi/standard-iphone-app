@@ -18,6 +18,7 @@
     label.textAlignment = UITextAlignmentCenter;
     label.text = @"SPLASH";
     [self.view addSubview:label];
+    [label release];
 }
 
 

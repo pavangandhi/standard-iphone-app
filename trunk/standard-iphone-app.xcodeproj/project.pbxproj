@@ -48,6 +48,9 @@
 		A692E41E1425349A00A52229 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A692E41C1425349A00A52229 /* InfoPlist.strings */; };
 		A692E4211425349A00A52229 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A692E4201425349A00A52229 /* main.m */; };
 		A692E4241425349A00A52229 /* standard_iphone_appDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A692E4231425349A00A52229 /* standard_iphone_appDelegate.m */; };
+		A6C749C314260DDD006B88DD /* BlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C749C214260DDD006B88DD /* BlockButton.m */; };
+		A6C749CC142611D9006B88DD /* ActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C749CB142611D9006B88DD /* ActionSheet.m */; };
+		A6C749CF14261D54006B88DD /* AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C749CE14261D54006B88DD /* AlertView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +133,12 @@
 		A692E4201425349A00A52229 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A692E4221425349A00A52229 /* standard_iphone_appDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = standard_iphone_appDelegate.h; sourceTree = "<group>"; };
 		A692E4231425349A00A52229 /* standard_iphone_appDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = standard_iphone_appDelegate.m; sourceTree = "<group>"; };
+		A6C749C114260DDD006B88DD /* BlockButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockButton.h; sourceTree = "<group>"; };
+		A6C749C214260DDD006B88DD /* BlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockButton.m; sourceTree = "<group>"; };
+		A6C749CA142611D9006B88DD /* ActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheet.h; sourceTree = "<group>"; };
+		A6C749CB142611D9006B88DD /* ActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheet.m; sourceTree = "<group>"; };
+		A6C749CD14261D54006B88DD /* AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertView.h; sourceTree = "<group>"; };
+		A6C749CE14261D54006B88DD /* AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +282,12 @@
 				A60A9E1814256AE300A65B3D /* AsyncUIImage.m */,
 				A60A9E1E1425799C00A65B3D /* CipherClass.h */,
 				A60A9E1F1425799C00A65B3D /* CipherClass.m */,
+				A6C749C114260DDD006B88DD /* BlockButton.h */,
+				A6C749C214260DDD006B88DD /* BlockButton.m */,
+				A6C749CA142611D9006B88DD /* ActionSheet.h */,
+				A6C749CB142611D9006B88DD /* ActionSheet.m */,
+				A6C749CD14261D54006B88DD /* AlertView.h */,
+				A6C749CE14261D54006B88DD /* AlertView.m */,
 			);
 			name = CustomClasses;
 			sourceTree = "<group>";
@@ -439,6 +454,9 @@
 				A60A9E201425799C00A65B3D /* CipherClass.m in Sources */,
 				A60A9E2314257A3300A65B3D /* NSData-Extensions.m in Sources */,
 				A60A9E361425853E00A65B3D /* NSTimer-Extensions.m in Sources */,
+				A6C749C314260DDD006B88DD /* BlockButton.m in Sources */,
+				A6C749CC142611D9006B88DD /* ActionSheet.m in Sources */,
+				A6C749CF14261D54006B88DD /* AlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
