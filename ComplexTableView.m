@@ -14,7 +14,7 @@
 
 @synthesize functionDelegate;
 @synthesize debug;
-
+@synthesize isKeyboardOpen;
 
 
 /*  

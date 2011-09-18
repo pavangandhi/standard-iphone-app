@@ -13,5 +13,11 @@
 + (id)objectWithSqlColumnRepresentation:(NSString *)columnData;
 - (NSString *)sqlColumnRepresentationOfSelf;
 - (BOOL) isNotEmpty;
+- (BOOL) containsString: (NSString*) substring;
+- (NSString *) MD5;
+- (NSData*) stringToData;
+- (NSString*)nl2br;
+- (NSString *) trimmedString;
+- (NSDate *) date;
 
 @end

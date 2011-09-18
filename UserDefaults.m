@@ -7,7 +7,7 @@
 //
 
 #import "UserDefaults.h"
-
+#import "UIColor-Extensions.h"
 
 @implementation UserDefaults
 
@@ -126,7 +126,7 @@
 
 +(void) setDefaultSettings {
     [UserDefaults setBool:YES forKey:isAppOrientationEnabled];
-    [UserDefaults setColor:[UIColor getStandardBackgroundColor] forKey:standardBackgroundColor];
+    [UserDefaults setColor:[UIColor getStandardTableViewBackgroundColor] forKey:standardBackgroundColor];
 }
 
 

@@ -11,7 +11,7 @@
 
 @implementation UIColor (UIColor_Extensions)
 
-+(UIColor*) getStandardBackgroundColor {
++(UIColor*) getStandardTableViewBackgroundColor {
     return [UIColor colorWithRed:224.0f/255.0f green:224.0f/255.0f blue:224.0f/255.0f alpha:1];
 }
 
