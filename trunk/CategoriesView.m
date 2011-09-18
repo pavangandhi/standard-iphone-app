@@ -25,23 +25,18 @@
     [sec1 addCell:@"menschen" andTitel:@"Test1" andCellType:UITableViewCellStyleValue1]; 
     [sec1 addCell:@"sex" andTitel:@"Test2" andCellType:UITableViewCellStyleValue1]; 
     [sec1 addCell:@"computer" andTitel:@"Test3" andCellType:UITableViewCellStyleValue1]; 
-    [sec1 addCell:@"medien" andTitel:@"Test4" andCellType:UITableViewCellStyleValue1];  
+    ComplexTableCell *cell=  [sec1 addCell:@"medien" andTitel:@"" andCellType:UITableViewCellStyleValue1];  
+    
+    AsyncUIImage *image = [[AsyncUIImage alloc] initWithFrame:CGRectMake(2, 2, 40, 40)];
+    [image loadImageFromURL:@"http://www.ste.ag/wp-content/uploads/2007/07/canon-eos-5d-markii.jpg"];
+    [cell.contentView addSubview:image];
+    
     [self.view addSubview:tbl_categories];
 }
 
 
 - (void)viewDidLoad
 {
-    
-    UIWebView *webView = [[UIWebView alloc] initWithFrame: [[UIScreen mainScreen] applicationFrame]];  
-    webView.delegate = self;  
-
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL: [NSURL URLWithString: @"http://www.3lang.de/test.mp3"] cachePolicy: NSURLRequestUseProtocolCachePolicy timeoutInterval: 10];  
-    [webView loadRequest: request]; 
-//    [self.view addSubview:webView];
-
-    
-    
     [super viewDidLoad];
 }
 

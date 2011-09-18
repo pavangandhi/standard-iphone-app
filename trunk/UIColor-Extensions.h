@@ -11,6 +11,6 @@
 
 @interface UIColor (UIColor_Extensions)
 
-+(UIColor*) getStandardBackgroundColor;
++(UIColor*) getStandardTableViewBackgroundColor;
 
 @end

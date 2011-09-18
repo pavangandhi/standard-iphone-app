@@ -36,7 +36,6 @@
 
 
 -(void) resetFrame;
--(void) resetTableViewFrame;
 - (id)initWithStyle:(UITableViewStyle)style andNavi:(BOOL) n Toolbar:(BOOL) t CustomSearcbar:(BOOL) s;
 
 
@@ -80,12 +79,11 @@
 
 -(int) getHeightWithNavi:(BOOL) n Toolbar:(BOOL) t Searchbar:(BOOL) s Keyboard:(BOOL) k;
 -(int) getWidth;
--(void) animateSlowFrameReset;
+
 
 -(void) removeKeyboardObserver;
 -(void) addKeyboardObserver;
 
 
 -(CGRect) rectSwap:(CGRect) rect;
--(CGRect) getScreenFrame;
 @end

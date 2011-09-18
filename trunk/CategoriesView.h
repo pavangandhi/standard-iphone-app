@@ -8,6 +8,7 @@
 
 #import "ImportFile.h"
 #import <AVFoundation/AVFoundation.h>
+#import "AsyncUIImage.h"
 
 @interface CategoriesView : UIViewController <UITabBarDelegate> {
     ComplexTableView *tbl_categories;

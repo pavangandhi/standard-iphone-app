@@ -13,6 +13,6 @@
 
 + (NSString*) getHardwareDeviceName;
 + (BOOL) hasDeviceGPS;
-+ (BOOL) hasDeviceCamera;
-+ (UIUserInterfaceIdiom) getIdiom;
++ (BOOL) hasDeviceRearCamera;
++ (BOOL) hasDeviceFrontCamera;
 @end

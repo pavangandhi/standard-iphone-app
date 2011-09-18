@@ -36,8 +36,12 @@
 		A60A9DD1142537EF00A65B3D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A60A9DD0142537EF00A65B3D /* libsqlite3.0.dylib */; };
 		A60A9DD31425389B00A65B3D /* ApplicationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60A9DD21425389B00A65B3D /* ApplicationView.xib */; };
 		A60A9DE614253B4300A65B3D /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A60A9DE514253B4300A65B3D /* libz.1.2.3.dylib */; };
-		A60A9DEB142557FC00A65B3D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60A9DEA142557FC00A65B3D /* AudioToolbox.framework */; };
-		A60A9DED1425582C00A65B3D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60A9DEC1425582C00A65B3D /* AVFoundation.framework */; };
+		A60A9E161425699F00A65B3D /* UIImage-Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A9E151425699F00A65B3D /* UIImage-Extensions.m */; };
+		A60A9E1914256AE300A65B3D /* AsyncUIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A9E1814256AE300A65B3D /* AsyncUIImage.m */; };
+		A60A9E1D1425792900A65B3D /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A9E1C1425792900A65B3D /* JSONKit.m */; };
+		A60A9E201425799C00A65B3D /* CipherClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A9E1F1425799C00A65B3D /* CipherClass.m */; };
+		A60A9E2314257A3300A65B3D /* NSData-Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A9E2214257A3300A65B3D /* NSData-Extensions.m */; };
+		A60A9E361425853E00A65B3D /* NSTimer-Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A9E351425853E00A65B3D /* NSTimer-Extensions.m */; };
 		A692E4141425349A00A52229 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A692E4131425349A00A52229 /* UIKit.framework */; };
 		A692E4161425349A00A52229 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A692E4151425349A00A52229 /* Foundation.framework */; };
 		A692E4181425349A00A52229 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A692E4171425349A00A52229 /* CoreGraphics.framework */; };
@@ -104,9 +108,18 @@
 		A60A9DD0142537EF00A65B3D /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		A60A9DD21425389B00A65B3D /* ApplicationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationView.xib; sourceTree = "<group>"; };
 		A60A9DE514253B4300A65B3D /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
-		A60A9DE8142557DC00A65B3D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		A60A9DEA142557FC00A65B3D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		A60A9DEC1425582C00A65B3D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A60A9E141425699F00A65B3D /* UIImage-Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage-Extensions.h"; sourceTree = "<group>"; };
+		A60A9E151425699F00A65B3D /* UIImage-Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage-Extensions.m"; sourceTree = "<group>"; };
+		A60A9E1714256AE300A65B3D /* AsyncUIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUIImage.h; sourceTree = "<group>"; };
+		A60A9E1814256AE300A65B3D /* AsyncUIImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUIImage.m; sourceTree = "<group>"; };
+		A60A9E1B1425792900A65B3D /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		A60A9E1C1425792900A65B3D /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		A60A9E1E1425799C00A65B3D /* CipherClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CipherClass.h; sourceTree = "<group>"; };
+		A60A9E1F1425799C00A65B3D /* CipherClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CipherClass.m; sourceTree = "<group>"; };
+		A60A9E2114257A3200A65B3D /* NSData-Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData-Extensions.h"; sourceTree = "<group>"; };
+		A60A9E2214257A3300A65B3D /* NSData-Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData-Extensions.m"; sourceTree = "<group>"; };
+		A60A9E341425853E00A65B3D /* NSTimer-Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer-Extensions.h"; sourceTree = "<group>"; };
+		A60A9E351425853E00A65B3D /* NSTimer-Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer-Extensions.m"; sourceTree = "<group>"; };
 		A692E40F1425349A00A52229 /* standard-iphone-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "standard-iphone-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A692E4131425349A00A52229 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A692E4151425349A00A52229 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -124,8 +137,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A60A9DED1425582C00A65B3D /* AVFoundation.framework in Frameworks */,
-				A60A9DEB142557FC00A65B3D /* AudioToolbox.framework in Frameworks */,
 				A60A9DE614253B4300A65B3D /* libz.1.2.3.dylib in Frameworks */,
 				A60A9DD1142537EF00A65B3D /* libsqlite3.0.dylib in Frameworks */,
 				A60A9DCF142537E800A65B3D /* CFNetwork.framework in Frameworks */,
@@ -143,6 +154,7 @@
 		A60A9D62142535DB00A65B3D /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				A60A9E1A1425791D00A65B3D /* JSONKit */,
 				A60A9D6A1425367700A65B3D /* InternetConnection */,
 				A60A9D691425366F00A65B3D /* ASI-HTTP */,
 			);
@@ -204,6 +216,12 @@
 				A60A9DA4142536A800A65B3D /* UIColor-Extensions.m */,
 				A60A9DA5142536A800A65B3D /* UIDevice-Attributes.h */,
 				A60A9DA6142536A800A65B3D /* UIDevice-Attributes.m */,
+				A60A9E141425699F00A65B3D /* UIImage-Extensions.h */,
+				A60A9E151425699F00A65B3D /* UIImage-Extensions.m */,
+				A60A9E2114257A3200A65B3D /* NSData-Extensions.h */,
+				A60A9E2214257A3300A65B3D /* NSData-Extensions.m */,
+				A60A9E341425853E00A65B3D /* NSTimer-Extensions.h */,
+				A60A9E351425853E00A65B3D /* NSTimer-Extensions.m */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -251,16 +269,26 @@
 			children = (
 				A60A9D87142536A800A65B3D /* UserDefaults.h */,
 				A60A9D88142536A800A65B3D /* UserDefaults.m */,
+				A60A9E1714256AE300A65B3D /* AsyncUIImage.h */,
+				A60A9E1814256AE300A65B3D /* AsyncUIImage.m */,
+				A60A9E1E1425799C00A65B3D /* CipherClass.h */,
+				A60A9E1F1425799C00A65B3D /* CipherClass.m */,
 			);
 			name = CustomClasses;
+			sourceTree = "<group>";
+		};
+		A60A9E1A1425791D00A65B3D /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				A60A9E1B1425792900A65B3D /* JSONKit.h */,
+				A60A9E1C1425792900A65B3D /* JSONKit.m */,
+			);
+			name = JSONKit;
 			sourceTree = "<group>";
 		};
 		A692E4041425349900A52229 = {
 			isa = PBXGroup;
 			children = (
-				A60A9DEC1425582C00A65B3D /* AVFoundation.framework */,
-				A60A9DEA142557FC00A65B3D /* AudioToolbox.framework */,
-				A60A9DE8142557DC00A65B3D /* AVFoundation.framework */,
 				A60A9DE714253E0700A65B3D /* CustomClasses */,
 				A60A9D671425363E00A65B3D /* ComplexTableView */,
 				A60A9D65142535F800A65B3D /* Database */,
@@ -405,6 +433,12 @@
 				A60A9DC4142536A800A65B3D /* TBLCategories.m in Sources */,
 				A60A9DC5142536A800A65B3D /* UIColor-Extensions.m in Sources */,
 				A60A9DC6142536A800A65B3D /* UIDevice-Attributes.m in Sources */,
+				A60A9E161425699F00A65B3D /* UIImage-Extensions.m in Sources */,
+				A60A9E1914256AE300A65B3D /* AsyncUIImage.m in Sources */,
+				A60A9E1D1425792900A65B3D /* JSONKit.m in Sources */,
+				A60A9E201425799C00A65B3D /* CipherClass.m in Sources */,
+				A60A9E2314257A3300A65B3D /* NSData-Extensions.m in Sources */,
+				A60A9E361425853E00A65B3D /* NSTimer-Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
