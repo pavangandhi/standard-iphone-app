@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0420078A142A3FE400EE6F4F /* NSObject+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 04200775142A3FE400EE6F4F /* NSObject+BlocksKit.m */; };
+		0420078B142A3FE400EE6F4F /* NSObject+AssociatedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 04200777142A3FE400EE6F4F /* NSObject+AssociatedObjects.m */; };
+		0420078C142A3FE400EE6F4F /* BKDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04200779142A3FE400EE6F4F /* BKDelegateProxy.m */; };
+		0420078D142A3FE400EE6F4F /* NSArray+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0420077B142A3FE400EE6F4F /* NSArray+BlocksKit.m */; };
+		0420078E142A3FE400EE6F4F /* NSTimer+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0420077D142A3FE400EE6F4F /* NSTimer+BlocksKit.m */; };
+		0420078F142A3FE400EE6F4F /* UIAlertView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0420077F142A3FE400EE6F4F /* UIAlertView+BlocksKit.m */; };
+		04200790142A3FE400EE6F4F /* UIActionSheet+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 04200781142A3FE400EE6F4F /* UIActionSheet+BlocksKit.m */; };
+		04200791142A3FE400EE6F4F /* UIBarButtonItem+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 04200783142A3FE400EE6F4F /* UIBarButtonItem+BlocksKit.m */; };
+		04200792142A3FE400EE6F4F /* UIGestureRecognizer+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 04200785142A3FE400EE6F4F /* UIGestureRecognizer+BlocksKit.m */; };
+		04200793142A3FE400EE6F4F /* UIView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 04200787142A3FE400EE6F4F /* UIView+BlocksKit.m */; };
+		04200794142A3FE400EE6F4F /* UIWebView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 04200789142A3FE400EE6F4F /* UIWebView+BlocksKit.m */; };
 		A60A9DAB142536A800A65B3D /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A9D6C142536A800A65B3D /* ASIAuthenticationDialog.m */; };
 		A60A9DAC142536A800A65B3D /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A9D6F142536A800A65B3D /* ASIDataCompressor.m */; };
 		A60A9DAD142536A800A65B3D /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A9D71142536A800A65B3D /* ASIDataDecompressor.m */; };
@@ -54,6 +65,29 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04200773142A3FE300EE6F4F /* BKGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKGlobals.h; sourceTree = "<group>"; };
+		04200774142A3FE300EE6F4F /* NSObject+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BlocksKit.h"; sourceTree = "<group>"; };
+		04200775142A3FE400EE6F4F /* NSObject+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BlocksKit.m"; sourceTree = "<group>"; };
+		04200776142A3FE400EE6F4F /* NSObject+AssociatedObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AssociatedObjects.h"; sourceTree = "<group>"; };
+		04200777142A3FE400EE6F4F /* NSObject+AssociatedObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AssociatedObjects.m"; sourceTree = "<group>"; };
+		04200778142A3FE400EE6F4F /* BKDelegateProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKDelegateProxy.h; sourceTree = "<group>"; };
+		04200779142A3FE400EE6F4F /* BKDelegateProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKDelegateProxy.m; sourceTree = "<group>"; };
+		0420077A142A3FE400EE6F4F /* NSArray+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+BlocksKit.h"; sourceTree = "<group>"; };
+		0420077B142A3FE400EE6F4F /* NSArray+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+BlocksKit.m"; sourceTree = "<group>"; };
+		0420077C142A3FE400EE6F4F /* NSTimer+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+BlocksKit.h"; sourceTree = "<group>"; };
+		0420077D142A3FE400EE6F4F /* NSTimer+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+BlocksKit.m"; sourceTree = "<group>"; };
+		0420077E142A3FE400EE6F4F /* UIAlertView+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+BlocksKit.h"; sourceTree = "<group>"; };
+		0420077F142A3FE400EE6F4F /* UIAlertView+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+BlocksKit.m"; sourceTree = "<group>"; };
+		04200780142A3FE400EE6F4F /* UIActionSheet+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+BlocksKit.h"; sourceTree = "<group>"; };
+		04200781142A3FE400EE6F4F /* UIActionSheet+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+BlocksKit.m"; sourceTree = "<group>"; };
+		04200782142A3FE400EE6F4F /* UIBarButtonItem+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BlocksKit.h"; sourceTree = "<group>"; };
+		04200783142A3FE400EE6F4F /* UIBarButtonItem+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BlocksKit.m"; sourceTree = "<group>"; };
+		04200784142A3FE400EE6F4F /* UIGestureRecognizer+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+BlocksKit.h"; sourceTree = "<group>"; };
+		04200785142A3FE400EE6F4F /* UIGestureRecognizer+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+BlocksKit.m"; sourceTree = "<group>"; };
+		04200786142A3FE400EE6F4F /* UIView+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BlocksKit.h"; sourceTree = "<group>"; };
+		04200787142A3FE400EE6F4F /* UIView+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BlocksKit.m"; sourceTree = "<group>"; };
+		04200788142A3FE400EE6F4F /* UIWebView+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+BlocksKit.h"; sourceTree = "<group>"; };
+		04200789142A3FE400EE6F4F /* UIWebView+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+BlocksKit.m"; sourceTree = "<group>"; };
 		A60A9D6B142536A800A65B3D /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		A60A9D6C142536A800A65B3D /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		A60A9D6D142536A800A65B3D /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -160,6 +194,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04200772142A3FE300EE6F4F /* Blocks-Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04200773142A3FE300EE6F4F /* BKGlobals.h */,
+				04200774142A3FE300EE6F4F /* NSObject+BlocksKit.h */,
+				04200775142A3FE400EE6F4F /* NSObject+BlocksKit.m */,
+				04200776142A3FE400EE6F4F /* NSObject+AssociatedObjects.h */,
+				04200777142A3FE400EE6F4F /* NSObject+AssociatedObjects.m */,
+				04200778142A3FE400EE6F4F /* BKDelegateProxy.h */,
+				04200779142A3FE400EE6F4F /* BKDelegateProxy.m */,
+				0420077A142A3FE400EE6F4F /* NSArray+BlocksKit.h */,
+				0420077B142A3FE400EE6F4F /* NSArray+BlocksKit.m */,
+				0420077C142A3FE400EE6F4F /* NSTimer+BlocksKit.h */,
+				0420077D142A3FE400EE6F4F /* NSTimer+BlocksKit.m */,
+				0420077E142A3FE400EE6F4F /* UIAlertView+BlocksKit.h */,
+				0420077F142A3FE400EE6F4F /* UIAlertView+BlocksKit.m */,
+				04200780142A3FE400EE6F4F /* UIActionSheet+BlocksKit.h */,
+				04200781142A3FE400EE6F4F /* UIActionSheet+BlocksKit.m */,
+				04200782142A3FE400EE6F4F /* UIBarButtonItem+BlocksKit.h */,
+				04200783142A3FE400EE6F4F /* UIBarButtonItem+BlocksKit.m */,
+				04200784142A3FE400EE6F4F /* UIGestureRecognizer+BlocksKit.h */,
+				04200785142A3FE400EE6F4F /* UIGestureRecognizer+BlocksKit.m */,
+				04200786142A3FE400EE6F4F /* UIView+BlocksKit.h */,
+				04200787142A3FE400EE6F4F /* UIView+BlocksKit.m */,
+				04200788142A3FE400EE6F4F /* UIWebView+BlocksKit.h */,
+				04200789142A3FE400EE6F4F /* UIWebView+BlocksKit.m */,
+			);
+			name = "Blocks-Extensions";
+			sourceTree = "<group>";
+		};
 		A60A9D62142535DB00A65B3D /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +281,7 @@
 		A60A9D681425364700A65B3D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				04200772142A3FE300EE6F4F /* Blocks-Extensions */,
 				A60A9D95142536A800A65B3D /* NSDate-Extensions.h */,
 				A60A9D96142536A800A65B3D /* NSDate-Extensions.m */,
 				A60A9D97142536A800A65B3D /* NSString-Extensions.h */,
@@ -457,6 +522,17 @@
 				A6C749C314260DDD006B88DD /* BlockButton.m in Sources */,
 				A6C749CC142611D9006B88DD /* ActionSheet.m in Sources */,
 				A6C749CF14261D54006B88DD /* AlertView.m in Sources */,
+				0420078A142A3FE400EE6F4F /* NSObject+BlocksKit.m in Sources */,
+				0420078B142A3FE400EE6F4F /* NSObject+AssociatedObjects.m in Sources */,
+				0420078C142A3FE400EE6F4F /* BKDelegateProxy.m in Sources */,
+				0420078D142A3FE400EE6F4F /* NSArray+BlocksKit.m in Sources */,
+				0420078E142A3FE400EE6F4F /* NSTimer+BlocksKit.m in Sources */,
+				0420078F142A3FE400EE6F4F /* UIAlertView+BlocksKit.m in Sources */,
+				04200790142A3FE400EE6F4F /* UIActionSheet+BlocksKit.m in Sources */,
+				04200791142A3FE400EE6F4F /* UIBarButtonItem+BlocksKit.m in Sources */,
+				04200792142A3FE400EE6F4F /* UIGestureRecognizer+BlocksKit.m in Sources */,
+				04200793142A3FE400EE6F4F /* UIView+BlocksKit.m in Sources */,
+				04200794142A3FE400EE6F4F /* UIWebView+BlocksKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
