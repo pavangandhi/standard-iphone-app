@@ -18,6 +18,13 @@
 		04200792142A3FE400EE6F4F /* UIGestureRecognizer+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 04200785142A3FE400EE6F4F /* UIGestureRecognizer+BlocksKit.m */; };
 		04200793142A3FE400EE6F4F /* UIView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 04200787142A3FE400EE6F4F /* UIView+BlocksKit.m */; };
 		04200794142A3FE400EE6F4F /* UIWebView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 04200789142A3FE400EE6F4F /* UIWebView+BlocksKit.m */; };
+		0432611E1445F49500EF7ACA /* AUIAnimatableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0432611B1445F49500EF7ACA /* AUIAnimatableLabel.m */; };
+		0432611F1445F49500EF7ACA /* UIFont+CoreTextExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0432611D1445F49500EF7ACA /* UIFont+CoreTextExtensions.m */; };
+		043261471445F5B700EF7ACA /* FTCoreTextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 043261401445F5B700EF7ACA /* FTCoreTextStyle.m */; };
+		043261481445F5B700EF7ACA /* FTCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 043261421445F5B700EF7ACA /* FTCoreTextView.m */; };
+		043261491445F5B700EF7ACA /* UIColor+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 043261441445F5B700EF7ACA /* UIColor+Tools.m */; };
+		0432614A1445F5B700EF7ACA /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 043261461445F5B700EF7ACA /* UIView+Layout.m */; };
+		043261561445F69300EF7ACA /* Example_FTCoreText.m in Sources */ = {isa = PBXBuildFile; fileRef = 043261551445F69300EF7ACA /* Example_FTCoreText.m */; };
 		04ECB74A1445840A00FCB8CC /* DCCrossHairView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ECB7421445840A00FCB8CC /* DCCrossHairView.m */; };
 		04ECB74B1445840A00FCB8CC /* DCFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ECB7441445840A00FCB8CC /* DCFrameView.m */; };
 		04ECB74C1445840A00FCB8CC /* DCIntrospect.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ECB7461445840A00FCB8CC /* DCIntrospect.m */; };
@@ -94,6 +101,20 @@
 		04200787142A3FE400EE6F4F /* UIView+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BlocksKit.m"; sourceTree = "<group>"; };
 		04200788142A3FE400EE6F4F /* UIWebView+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+BlocksKit.h"; sourceTree = "<group>"; };
 		04200789142A3FE400EE6F4F /* UIWebView+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+BlocksKit.m"; sourceTree = "<group>"; };
+		0432611A1445F49500EF7ACA /* AUIAnimatableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUIAnimatableLabel.h; sourceTree = "<group>"; };
+		0432611B1445F49500EF7ACA /* AUIAnimatableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUIAnimatableLabel.m; sourceTree = "<group>"; };
+		0432611C1445F49500EF7ACA /* UIFont+CoreTextExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+CoreTextExtensions.h"; sourceTree = "<group>"; };
+		0432611D1445F49500EF7ACA /* UIFont+CoreTextExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+CoreTextExtensions.m"; sourceTree = "<group>"; };
+		0432613F1445F5B700EF7ACA /* FTCoreTextStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCoreTextStyle.h; sourceTree = "<group>"; };
+		043261401445F5B700EF7ACA /* FTCoreTextStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCoreTextStyle.m; sourceTree = "<group>"; };
+		043261411445F5B700EF7ACA /* FTCoreTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCoreTextView.h; sourceTree = "<group>"; };
+		043261421445F5B700EF7ACA /* FTCoreTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCoreTextView.m; sourceTree = "<group>"; };
+		043261431445F5B700EF7ACA /* UIColor+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Tools.h"; sourceTree = "<group>"; };
+		043261441445F5B700EF7ACA /* UIColor+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Tools.m"; sourceTree = "<group>"; };
+		043261451445F5B700EF7ACA /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		043261461445F5B700EF7ACA /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		043261541445F69300EF7ACA /* Example_FTCoreText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example_FTCoreText.h; sourceTree = "<group>"; };
+		043261551445F69300EF7ACA /* Example_FTCoreText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example_FTCoreText.m; sourceTree = "<group>"; };
 		04ECB7411445840A00FCB8CC /* DCCrossHairView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCrossHairView.h; sourceTree = "<group>"; };
 		04ECB7421445840A00FCB8CC /* DCCrossHairView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCCrossHairView.m; sourceTree = "<group>"; };
 		04ECB7431445840A00FCB8CC /* DCFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFrameView.h; sourceTree = "<group>"; };
@@ -243,6 +264,70 @@
 			name = "Blocks-Extensions";
 			sourceTree = "<group>";
 		};
+		043260FA1445F28100EF7ACA /* BadgeView */ = {
+			isa = PBXGroup;
+			children = (
+				04ECB761144585D900FCB8CC /* LKBadgeView.h */,
+				04ECB762144585D900FCB8CC /* LKBadgeView.m */,
+			);
+			name = BadgeView;
+			sourceTree = "<group>";
+		};
+		043260FB1445F2B300EF7ACA /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				A60A9D87142536A800A65B3D /* UserDefaults.h */,
+				A60A9D88142536A800A65B3D /* UserDefaults.m */,
+			);
+			name = UserDefaults;
+			sourceTree = "<group>";
+		};
+		043260FC1445F2C300EF7ACA /* AsyncUIImage */ = {
+			isa = PBXGroup;
+			children = (
+				A60A9E1714256AE300A65B3D /* AsyncUIImage.h */,
+				A60A9E1814256AE300A65B3D /* AsyncUIImage.m */,
+			);
+			name = AsyncUIImage;
+			sourceTree = "<group>";
+		};
+		043260FD1445F2D000EF7ACA /* Cipher */ = {
+			isa = PBXGroup;
+			children = (
+				A60A9E1E1425799C00A65B3D /* CipherClass.h */,
+				A60A9E1F1425799C00A65B3D /* CipherClass.m */,
+			);
+			name = Cipher;
+			sourceTree = "<group>";
+		};
+		043260FE1445F48400EF7ACA /* AnimatedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				0432611A1445F49500EF7ACA /* AUIAnimatableLabel.h */,
+				0432611B1445F49500EF7ACA /* AUIAnimatableLabel.m */,
+				0432611C1445F49500EF7ACA /* UIFont+CoreTextExtensions.h */,
+				0432611D1445F49500EF7ACA /* UIFont+CoreTextExtensions.m */,
+			);
+			name = AnimatedLabel;
+			sourceTree = "<group>";
+		};
+		0432613E1445F5AD00EF7ACA /* FTCoreText */ = {
+			isa = PBXGroup;
+			children = (
+				0432613F1445F5B700EF7ACA /* FTCoreTextStyle.h */,
+				043261401445F5B700EF7ACA /* FTCoreTextStyle.m */,
+				043261411445F5B700EF7ACA /* FTCoreTextView.h */,
+				043261421445F5B700EF7ACA /* FTCoreTextView.m */,
+				043261431445F5B700EF7ACA /* UIColor+Tools.h */,
+				043261441445F5B700EF7ACA /* UIColor+Tools.m */,
+				043261451445F5B700EF7ACA /* UIView+Layout.h */,
+				043261461445F5B700EF7ACA /* UIView+Layout.m */,
+				043261541445F69300EF7ACA /* Example_FTCoreText.h */,
+				043261551445F69300EF7ACA /* Example_FTCoreText.m */,
+			);
+			name = FTCoreText;
+			sourceTree = "<group>";
+		};
 		04ECB73F144583FA00FCB8CC /* Introspect */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,17 +458,17 @@
 			name = InternetConnection;
 			sourceTree = "<group>";
 		};
-		A60A9DE714253E0700A65B3D /* CustomClasses */ = {
+		A60A9DE714253E0700A65B3D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				04ECB761144585D900FCB8CC /* LKBadgeView.h */,
-				04ECB762144585D900FCB8CC /* LKBadgeView.m */,
-				A60A9D87142536A800A65B3D /* UserDefaults.h */,
-				A60A9D88142536A800A65B3D /* UserDefaults.m */,
-				A60A9E1714256AE300A65B3D /* AsyncUIImage.h */,
-				A60A9E1814256AE300A65B3D /* AsyncUIImage.m */,
-				A60A9E1E1425799C00A65B3D /* CipherClass.h */,
-				A60A9E1F1425799C00A65B3D /* CipherClass.m */,
+				0432613E1445F5AD00EF7ACA /* FTCoreText */,
+				043260FE1445F48400EF7ACA /* AnimatedLabel */,
+				A60A9D671425363E00A65B3D /* ComplexTableView */,
+				043260FD1445F2D000EF7ACA /* Cipher */,
+				043260FC1445F2C300EF7ACA /* AsyncUIImage */,
+				043260FB1445F2B300EF7ACA /* UserDefaults */,
+				043260FA1445F28100EF7ACA /* BadgeView */,
+				04ECB73F144583FA00FCB8CC /* Introspect */,
 				A6C749C114260DDD006B88DD /* BlockButton.h */,
 				A6C749C214260DDD006B88DD /* BlockButton.m */,
 				A6C749CA142611D9006B88DD /* ActionSheet.h */,
@@ -391,7 +476,7 @@
 				A6C749CD14261D54006B88DD /* AlertView.h */,
 				A6C749CE14261D54006B88DD /* AlertView.m */,
 			);
-			name = CustomClasses;
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		A60A9E1A1425791D00A65B3D /* JSONKit */ = {
@@ -406,9 +491,7 @@
 		A692E4041425349900A52229 = {
 			isa = PBXGroup;
 			children = (
-				04ECB73F144583FA00FCB8CC /* Introspect */,
-				A60A9DE714253E0700A65B3D /* CustomClasses */,
-				A60A9D671425363E00A65B3D /* ComplexTableView */,
+				A60A9DE714253E0700A65B3D /* Classes */,
 				A60A9D65142535F800A65B3D /* Database */,
 				A60A9D681425364700A65B3D /* Extensions */,
 				A60A9D64142535EE00A65B3D /* Tables */,
@@ -577,6 +660,13 @@
 				04ECB74C1445840A00FCB8CC /* DCIntrospect.m in Sources */,
 				04ECB74D1445840A00FCB8CC /* DCStatusBarOverlay.m in Sources */,
 				04ECB763144585D900FCB8CC /* LKBadgeView.m in Sources */,
+				0432611E1445F49500EF7ACA /* AUIAnimatableLabel.m in Sources */,
+				0432611F1445F49500EF7ACA /* UIFont+CoreTextExtensions.m in Sources */,
+				043261471445F5B700EF7ACA /* FTCoreTextStyle.m in Sources */,
+				043261481445F5B700EF7ACA /* FTCoreTextView.m in Sources */,
+				043261491445F5B700EF7ACA /* UIColor+Tools.m in Sources */,
+				0432614A1445F5B700EF7ACA /* UIView+Layout.m in Sources */,
+				043261561445F69300EF7ACA /* Example_FTCoreText.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
