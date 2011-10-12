@@ -18,6 +18,12 @@
 		04200792142A3FE400EE6F4F /* UIGestureRecognizer+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 04200785142A3FE400EE6F4F /* UIGestureRecognizer+BlocksKit.m */; };
 		04200793142A3FE400EE6F4F /* UIView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 04200787142A3FE400EE6F4F /* UIView+BlocksKit.m */; };
 		04200794142A3FE400EE6F4F /* UIWebView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 04200789142A3FE400EE6F4F /* UIWebView+BlocksKit.m */; };
+		04ECB74A1445840A00FCB8CC /* DCCrossHairView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ECB7421445840A00FCB8CC /* DCCrossHairView.m */; };
+		04ECB74B1445840A00FCB8CC /* DCFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ECB7441445840A00FCB8CC /* DCFrameView.m */; };
+		04ECB74C1445840A00FCB8CC /* DCIntrospect.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ECB7461445840A00FCB8CC /* DCIntrospect.m */; };
+		04ECB74D1445840A00FCB8CC /* DCStatusBarOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ECB7491445840A00FCB8CC /* DCStatusBarOverlay.m */; };
+		04ECB75E144584DE00FCB8CC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ECB75D144584DE00FCB8CC /* QuartzCore.framework */; };
+		04ECB763144585D900FCB8CC /* LKBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ECB762144585D900FCB8CC /* LKBadgeView.m */; };
 		A60A9DAB142536A800A65B3D /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A9D6C142536A800A65B3D /* ASIAuthenticationDialog.m */; };
 		A60A9DAC142536A800A65B3D /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A9D6F142536A800A65B3D /* ASIDataCompressor.m */; };
 		A60A9DAD142536A800A65B3D /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A9D71142536A800A65B3D /* ASIDataDecompressor.m */; };
@@ -88,6 +94,18 @@
 		04200787142A3FE400EE6F4F /* UIView+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BlocksKit.m"; sourceTree = "<group>"; };
 		04200788142A3FE400EE6F4F /* UIWebView+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+BlocksKit.h"; sourceTree = "<group>"; };
 		04200789142A3FE400EE6F4F /* UIWebView+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+BlocksKit.m"; sourceTree = "<group>"; };
+		04ECB7411445840A00FCB8CC /* DCCrossHairView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCrossHairView.h; sourceTree = "<group>"; };
+		04ECB7421445840A00FCB8CC /* DCCrossHairView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCCrossHairView.m; sourceTree = "<group>"; };
+		04ECB7431445840A00FCB8CC /* DCFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFrameView.h; sourceTree = "<group>"; };
+		04ECB7441445840A00FCB8CC /* DCFrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFrameView.m; sourceTree = "<group>"; };
+		04ECB7451445840A00FCB8CC /* DCIntrospect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCIntrospect.h; sourceTree = "<group>"; };
+		04ECB7461445840A00FCB8CC /* DCIntrospect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCIntrospect.m; sourceTree = "<group>"; };
+		04ECB7471445840A00FCB8CC /* DCIntrospectSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCIntrospectSettings.h; sourceTree = "<group>"; };
+		04ECB7481445840A00FCB8CC /* DCStatusBarOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStatusBarOverlay.h; sourceTree = "<group>"; };
+		04ECB7491445840A00FCB8CC /* DCStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStatusBarOverlay.m; sourceTree = "<group>"; };
+		04ECB75D144584DE00FCB8CC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		04ECB761144585D900FCB8CC /* LKBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKBadgeView.h; sourceTree = "<group>"; };
+		04ECB762144585D900FCB8CC /* LKBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKBadgeView.m; sourceTree = "<group>"; };
 		A60A9D6B142536A800A65B3D /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		A60A9D6C142536A800A65B3D /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		A60A9D6D142536A800A65B3D /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -188,6 +206,7 @@
 				A692E4161425349A00A52229 /* Foundation.framework in Frameworks */,
 				A692E4181425349A00A52229 /* CoreGraphics.framework in Frameworks */,
 				A692E4141425349A00A52229 /* UIKit.framework in Frameworks */,
+				04ECB75E144584DE00FCB8CC /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +241,22 @@
 				04200789142A3FE400EE6F4F /* UIWebView+BlocksKit.m */,
 			);
 			name = "Blocks-Extensions";
+			sourceTree = "<group>";
+		};
+		04ECB73F144583FA00FCB8CC /* Introspect */ = {
+			isa = PBXGroup;
+			children = (
+				04ECB7411445840A00FCB8CC /* DCCrossHairView.h */,
+				04ECB7421445840A00FCB8CC /* DCCrossHairView.m */,
+				04ECB7431445840A00FCB8CC /* DCFrameView.h */,
+				04ECB7441445840A00FCB8CC /* DCFrameView.m */,
+				04ECB7451445840A00FCB8CC /* DCIntrospect.h */,
+				04ECB7461445840A00FCB8CC /* DCIntrospect.m */,
+				04ECB7471445840A00FCB8CC /* DCIntrospectSettings.h */,
+				04ECB7481445840A00FCB8CC /* DCStatusBarOverlay.h */,
+				04ECB7491445840A00FCB8CC /* DCStatusBarOverlay.m */,
+			);
+			name = Introspect;
 			sourceTree = "<group>";
 		};
 		A60A9D62142535DB00A65B3D /* Network */ = {
@@ -341,6 +376,8 @@
 		A60A9DE714253E0700A65B3D /* CustomClasses */ = {
 			isa = PBXGroup;
 			children = (
+				04ECB761144585D900FCB8CC /* LKBadgeView.h */,
+				04ECB762144585D900FCB8CC /* LKBadgeView.m */,
 				A60A9D87142536A800A65B3D /* UserDefaults.h */,
 				A60A9D88142536A800A65B3D /* UserDefaults.m */,
 				A60A9E1714256AE300A65B3D /* AsyncUIImage.h */,
@@ -369,6 +406,7 @@
 		A692E4041425349900A52229 = {
 			isa = PBXGroup;
 			children = (
+				04ECB73F144583FA00FCB8CC /* Introspect */,
 				A60A9DE714253E0700A65B3D /* CustomClasses */,
 				A60A9D671425363E00A65B3D /* ComplexTableView */,
 				A60A9D65142535F800A65B3D /* Database */,
@@ -401,6 +439,7 @@
 				A692E4131425349A00A52229 /* UIKit.framework */,
 				A692E4151425349A00A52229 /* Foundation.framework */,
 				A692E4171425349A00A52229 /* CoreGraphics.framework */,
+				04ECB75D144584DE00FCB8CC /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -533,6 +572,11 @@
 				04200792142A3FE400EE6F4F /* UIGestureRecognizer+BlocksKit.m in Sources */,
 				04200793142A3FE400EE6F4F /* UIView+BlocksKit.m in Sources */,
 				04200794142A3FE400EE6F4F /* UIWebView+BlocksKit.m in Sources */,
+				04ECB74A1445840A00FCB8CC /* DCCrossHairView.m in Sources */,
+				04ECB74B1445840A00FCB8CC /* DCFrameView.m in Sources */,
+				04ECB74C1445840A00FCB8CC /* DCIntrospect.m in Sources */,
+				04ECB74D1445840A00FCB8CC /* DCStatusBarOverlay.m in Sources */,
+				04ECB763144585D900FCB8CC /* LKBadgeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
