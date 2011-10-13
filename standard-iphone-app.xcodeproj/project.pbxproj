@@ -25,6 +25,8 @@
 		043261491445F5B700EF7ACA /* UIColor+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 043261441445F5B700EF7ACA /* UIColor+Tools.m */; };
 		0432614A1445F5B700EF7ACA /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 043261461445F5B700EF7ACA /* UIView+Layout.m */; };
 		043261561445F69300EF7ACA /* Example_FTCoreText.m in Sources */ = {isa = PBXBuildFile; fileRef = 043261551445F69300EF7ACA /* Example_FTCoreText.m */; };
+		04A1268B14473AE100394AB1 /* AppInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1268A14473AE100394AB1 /* AppInformation.m */; };
+		04A1272414473EBC00394AB1 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A1272314473EBC00394AB1 /* CoreText.framework */; };
 		04ECB74A1445840A00FCB8CC /* DCCrossHairView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ECB7421445840A00FCB8CC /* DCCrossHairView.m */; };
 		04ECB74B1445840A00FCB8CC /* DCFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ECB7441445840A00FCB8CC /* DCFrameView.m */; };
 		04ECB74C1445840A00FCB8CC /* DCIntrospect.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ECB7461445840A00FCB8CC /* DCIntrospect.m */; };
@@ -115,6 +117,9 @@
 		043261461445F5B700EF7ACA /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
 		043261541445F69300EF7ACA /* Example_FTCoreText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example_FTCoreText.h; sourceTree = "<group>"; };
 		043261551445F69300EF7ACA /* Example_FTCoreText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example_FTCoreText.m; sourceTree = "<group>"; };
+		04A1268914473AE100394AB1 /* AppInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInformation.h; sourceTree = "<group>"; };
+		04A1268A14473AE100394AB1 /* AppInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInformation.m; sourceTree = "<group>"; };
+		04A1272314473EBC00394AB1 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		04ECB7411445840A00FCB8CC /* DCCrossHairView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCrossHairView.h; sourceTree = "<group>"; };
 		04ECB7421445840A00FCB8CC /* DCCrossHairView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCCrossHairView.m; sourceTree = "<group>"; };
 		04ECB7431445840A00FCB8CC /* DCFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFrameView.h; sourceTree = "<group>"; };
@@ -228,6 +233,7 @@
 				A692E4181425349A00A52229 /* CoreGraphics.framework in Frameworks */,
 				A692E4141425349A00A52229 /* UIKit.framework in Frameworks */,
 				04ECB75E144584DE00FCB8CC /* QuartzCore.framework in Frameworks */,
+				04A1272414473EBC00394AB1 /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +320,7 @@
 		0432613E1445F5AD00EF7ACA /* FTCoreText */ = {
 			isa = PBXGroup;
 			children = (
+				04A1272314473EBC00394AB1 /* CoreText.framework */,
 				0432613F1445F5B700EF7ACA /* FTCoreTextStyle.h */,
 				043261401445F5B700EF7ACA /* FTCoreTextStyle.m */,
 				043261411445F5B700EF7ACA /* FTCoreTextView.h */,
@@ -475,6 +482,8 @@
 				A6C749CB142611D9006B88DD /* ActionSheet.m */,
 				A6C749CD14261D54006B88DD /* AlertView.h */,
 				A6C749CE14261D54006B88DD /* AlertView.m */,
+				04A1268914473AE100394AB1 /* AppInformation.h */,
+				04A1268A14473AE100394AB1 /* AppInformation.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -667,6 +676,7 @@
 				043261491445F5B700EF7ACA /* UIColor+Tools.m in Sources */,
 				0432614A1445F5B700EF7ACA /* UIView+Layout.m in Sources */,
 				043261561445F69300EF7ACA /* Example_FTCoreText.m in Sources */,
+				04A1268B14473AE100394AB1 /* AppInformation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 #import "CategoriesView.h"
 #import "ActionSheet.h"
 #import "AlertView.h"
+#import "AppInformation.h"
 
 @implementation CategoriesView
 
@@ -16,6 +17,16 @@
     [super loadView];
     [self createTable];
     self.title = @"Test";
+	
+	NSLog(@"App Displayname: %@",[AppInformation getAppName]);
+	NSLog(@"App Identifier: %@",[AppInformation getAppIdentifier]);
+	NSLog(@"App Version: %@",[AppInformation getCurrentAppVersion]);
+	NSLog(@"Build Version: %@",[AppInformation getBuildVersion]);
+	NSLog(@"Current Language: %@",[AppInformation getCurrentLocale]);
+	NSLog(@"Device Identifier: %@",[AppInformation deviceIdentifer]);
+	NSLog(@"Device Plattform: %@",[AppInformation getHardwareDevice]);
+	NSLog(@"System Version: %@",[AppInformation getSystemVersion]);
+	
 }
 
 -(void) createTable {
