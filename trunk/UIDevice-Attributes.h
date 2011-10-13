@@ -15,4 +15,6 @@
 + (BOOL) hasDeviceGPS;
 + (BOOL) hasDeviceRearCamera;
 + (BOOL) hasDeviceFrontCamera;
++ (NSString *)getOSVersionBuild;
++ (NSString *)deviceIdentifier;
 @end
