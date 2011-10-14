@@ -35,7 +35,7 @@
     
     ComplexTableSection *sec1 = [tbl_categories createSection:@"sec1" andTitel:@""];
     [sec1 addCell:@"menschen" andTitel:@"Test1" andCellType:UITableViewCellStyleValue1]; 
-    [sec1 addCell:@"sex" andTitel:@"Test2" andCellType:UITableViewCellStyleValue1]; 
+    [sec1 addCell:@"test" andTitel:@"Test2" andCellType:UITableViewCellStyleValue1]; 
     ComplexTableCell *alerviewcell = [sec1 addCell:@"computer" andTitel:@"AlertView" andCellType:UITableViewCellStyleValue1]; 
     alerviewcell.didSelectSelector = @selector(showAlertView);
     
@@ -54,51 +54,12 @@
 
 
 -(void) showActionSheet {
-    BlockButton *cancelItem = [[BlockButton alloc] initWithLabel:@"Abbrechen"];
-    cancelItem.action = ^{
-        NSLog(@"Abbrechen");
-     };
-
-    BlockButton *redButton = [[BlockButton alloc] initWithLabel:@"RedButton"];
-    redButton.action = ^{
-        NSLog(@"RedButton");
-    };
-    
-    BlockButton *one = [[BlockButton alloc] initWithLabel:@"One"];
-    one.action = ^{
-        NSLog(@"One");
-    };    
-
-    BlockButton *two = [[BlockButton alloc] initWithLabel:@"Two"];
-    two.action = ^{
-        NSLog(@"Two");
-    };     
-    
-    ActionSheet *sheet = [[ActionSheet alloc] initWithTitle:@"Test" cancelButton:cancelItem redButton:redButton otherButtons:[NSArray arrayWithObjects:one,two, nil]];
-    [sheet showFromTabBar:self.tabBarController.tabBar];
-    CLEAR_OBJ(sheet);
+ 
 }
 
 
 -(void) showAlertView {
-    BlockButton *cancelItem = [[BlockButton alloc] initWithLabel:@"Abbrechen"];
-    cancelItem.action = ^{
-        NSLog(@"Abbrechen");
-    };
-    
-    BlockButton *one = [[BlockButton alloc] initWithLabel:@"One"];
-    one.action = ^{
-        NSLog(@"One");
-    };    
-    
-    BlockButton *two = [[BlockButton alloc] initWithLabel:@"Two"];
-    two.action = ^{
-        NSLog(@"Two");
-    };     
-    
-    AlertView *alertview = [[AlertView alloc] initWithMessage:@"message" title:@"title" cancelButton:cancelItem otherButtonItems:[NSArray arrayWithObjects:one,two,nil]];
-    [alertview show];
-    CLEAR_OBJ(alertview);
+ 
 }
 
 - (void)viewDidLoad
