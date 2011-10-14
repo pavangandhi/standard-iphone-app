@@ -25,8 +25,8 @@
 	NSLog(@"Current Language: %@",[AppInformation getCurrentLocale]);
 	NSLog(@"Device Identifier: %@",[AppInformation deviceIdentifer]);
 	NSLog(@"Device Plattform: %@",[AppInformation getHardwareDevice]);
+	NSLog(@"Device Type: %@", [AppInformation getPlatformType]);
 	NSLog(@"System Version: %@",[AppInformation getSystemVersion]);
-	
 }
 
 -(void) createTable {

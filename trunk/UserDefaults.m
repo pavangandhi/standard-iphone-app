@@ -122,12 +122,28 @@
 
 
 
-// STANDARD DEFAULT SETTINGS !!!
+#pragma mark - NSUserDefaults -> UIColor
 
-+(void) setDefaultSettings {
-    [UserDefaults setBool:YES forKey:isAppOrientationEnabled];
-    [UserDefaults setColor:[UIColor getStandardTableViewBackgroundColor] forKey:standardBackgroundColor];
+
+// Function: Function to get a color value from UserDefaults for a custom key
+// Return: uicolor value
+
++(NSMutableArray*) getArrayForKey:(NSString*)key {
+    NSData *array = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+	if(array == nil) return nil;
+    NSMutableArray *tmpArray = [NSMutableArray arrayWithArray:[NSKeyedUnarchiver unarchiveObjectWithData:array]];
+	return tmpArray;
 }
+
+// Function: Function to set a uicolor to UserDefaults for a custom key
+// Return: boolean value if synchronize was successful or not
+
++(BOOL) setArray:(NSArray*)array forKey:(NSString*)key {
+    NSData *data_array = [NSKeyedArchiver archivedDataWithRootObject:array];
+    [[NSUserDefaults standardUserDefaults] setObject:data_array forKey:key];
+    return [[self getStandardUserDefaults] synchronize];
+}
+
 
 
 

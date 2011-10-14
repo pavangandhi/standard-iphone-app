@@ -21,18 +21,28 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	[self loadDatabase];
+	[self loadSplashView];
+	[self loadInspector];
+	[self loadAppSettings];
 	
-    // Erstelle eine SQLite Datenbank
+    [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(onSlashScreenExpired) userInfo:nil repeats:NO];	
+
+    return YES;
+}
+
+-(void) loadDatabase {
+	// Erstelle eine SQLite Datenbank
     dbConnection = [DBConnection new];
-    
+}
+
+-(void) loadSplashView {
     splashView = [SplashView new];
     [self.window addSubview:splashView.view];
-    [self.window makeKeyAndVisible];
+    [self.window makeKeyAndVisible];	
+}
 
-	/**
-	 * 
-	 * INSPECTOR
-	 */
+-(void) loadInspector {
 	
 	// create a custom tap gesture recognizer so introspection can be invoked from a device
 	// this one is a three finger double tap
@@ -46,15 +56,47 @@
 	
 	// always insert this AFTER makeKeyAndVisible so statusBarOrientation is reported correctly.
 	[[DCIntrospect sharedIntrospector] start];
-	
-	
-	
-    //set delay before showing new screen
-    // Perform a function when done with loading
-    [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(onSlashScreenExpired) userInfo:nil repeats:NO];
-    
-    return YES;
 }
+
+
+-(void) loadAppSettings {
+	
+	NSInteger latestVersionID = [[AppSettingsManager sharedManager] getVersionNumberBeforeUpdate];
+	
+	// 10001 => 1.00.01
+	[[AppSettingsManager sharedManager] setVersionNumber:10002];
+	
+	// Set if App is a full version
+	[[AppSettingsManager sharedManager] setIsProVersion:YES];
+	
+	// Check if apps starts the first time
+	if([[AppSettingsManager sharedManager] isFirstStart] == TRUE) {
+		NSLog(@" FIRST START ");
+		
+		// Load default settings
+		[[AppSettingsManager sharedManager] setDefaultNavigationControllerTintColor:[UIColor greenColor]];
+		[[AppSettingsManager sharedManager] setDefaultViewBackgroundColor:[UIColor yellowColor]];
+		[[AppSettingsManager sharedManager] setIsOrientationEnabled:NO];
+	}
+	
+	// Check if start is an update
+	if([[AppSettingsManager sharedManager] isUpdate] == TRUE) {
+		
+		if(latestVersionID == 10001) {
+			NSLog(@"UDATE FROM 10001 TO 10002");
+		}
+		else if(latestVersionID == 10002) {
+			NSLog(@"UDATE FROM 10002 TO 10003");
+		}
+		else if(latestVersionID == 10003) {
+			NSLog(@"UDATE FROM 10003 TO 10004");
+		}				
+		else if(latestVersionID == 10004) {
+			NSLog(@"UDATE FROM 10004 TO 10005");
+		}
+	}		
+}
+
 
 -(void) onSlashScreenExpired {
     [splashView.view removeFromSuperview];

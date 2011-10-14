@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DBConnection.h"
+#import "AppSettingsManager.h"
 #import "CategoriesView.h"
 #import "SplashView.h"
 
@@ -20,6 +21,11 @@
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UITabBarController *tabbarController;
+
 -(DBConnection*) getCurrentDBConnection;
+-(void) loadDatabase;
+-(void) loadSplashView;
+-(void) loadInspector;
+-(void) loadAppSettings;
 
 @end

@@ -32,6 +32,41 @@
 }
 
 
++ (NSString*) platformType
+{
+    NSString *platform = [self getHardwareDeviceName];
+	
+    // iPhone
+    if ([platform isEqualToString:@"iPhone1,1"]) return @"iPhone 2G";
+    if ([platform isEqualToString:@"iPhone1,2"]) return @"iPhone 3G";
+    if ([platform hasPrefix:@"iPhone2,1"]) return @"iPhone 3GS";
+    if ([platform hasPrefix:@"iPhone3,1"]) return @"iPhone 4";
+    if ([platform hasPrefix:@"iPhone3,2"]) return @"iPhone 4S";	
+    if ([platform hasPrefix:@"iPhone4"]) return @"iPhone 5";
+    
+    // iPod
+    if ([platform hasPrefix:@"iPod1"]) return @"iPod 1G";
+    if ([platform hasPrefix:@"iPod2"]) return @"iPod 2G";
+    if ([platform hasPrefix:@"iPod3"]) return @"iPod 3G";
+    if ([platform hasPrefix:@"iPod4"]) return @"iPod 4G";
+	
+    // iPad
+    if ([platform hasPrefix:@"iPad1"]) return @"iPad 1";
+    if ([platform hasPrefix:@"iPad2"]) return @"iPad 2";
+    if ([platform hasPrefix:@"iPad3"]) return @"iPad 3";
+    
+    // Apple TV
+    if ([platform hasPrefix:@"AppleTV2"]) return @"Apple TV";
+	
+	// Unknown
+    if ([platform hasPrefix:@"iPhone"]) return @"Unknown iPhone";
+    if ([platform hasPrefix:@"iPod"]) return @"Unknown iPod";
+    if ([platform hasPrefix:@"iPad"]) return @"Unknown iPad";
+    
+	return @"Unknown Device";
+}
+
+
 
 #pragma mark - Other Methods
 
