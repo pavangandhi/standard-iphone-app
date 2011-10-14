@@ -25,6 +25,7 @@
 		043261491445F5B700EF7ACA /* UIColor+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 043261441445F5B700EF7ACA /* UIColor+Tools.m */; };
 		0432614A1445F5B700EF7ACA /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 043261461445F5B700EF7ACA /* UIView+Layout.m */; };
 		043261561445F69300EF7ACA /* Example_FTCoreText.m in Sources */ = {isa = PBXBuildFile; fileRef = 043261551445F69300EF7ACA /* Example_FTCoreText.m */; };
+		04789F421448849600CD0265 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04789F401448849600CD0265 /* Localizable.strings */; };
 		04A1268B14473AE100394AB1 /* AppInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1268A14473AE100394AB1 /* AppInformation.m */; };
 		04A1272414473EBC00394AB1 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A1272314473EBC00394AB1 /* CoreText.framework */; };
 		04ECB74A1445840A00FCB8CC /* DCCrossHairView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ECB7421445840A00FCB8CC /* DCCrossHairView.m */; };
@@ -115,6 +116,7 @@
 		043261461445F5B700EF7ACA /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
 		043261541445F69300EF7ACA /* Example_FTCoreText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example_FTCoreText.h; sourceTree = "<group>"; };
 		043261551445F69300EF7ACA /* Example_FTCoreText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example_FTCoreText.m; sourceTree = "<group>"; };
+		04789F411448849600CD0265 /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		04A1268914473AE100394AB1 /* AppInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInformation.h; sourceTree = "<group>"; };
 		04A1268A14473AE100394AB1 /* AppInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInformation.m; sourceTree = "<group>"; };
 		04A1272314473EBC00394AB1 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -558,8 +560,9 @@
 		A692E41A1425349A00A52229 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A692E41B1425349A00A52229 /* standard-iphone-app-Info.plist */,
+				04789F401448849600CD0265 /* Localizable.strings */,
 				A692E41C1425349A00A52229 /* InfoPlist.strings */,
+				A692E41B1425349A00A52229 /* standard-iphone-app-Info.plist */,
 				A692E41F1425349A00A52229 /* standard-iphone-app-Prefix.pch */,
 				A692E4201425349A00A52229 /* main.m */,
 			);
@@ -615,6 +618,7 @@
 			files = (
 				A692E41E1425349A00A52229 /* InfoPlist.strings in Resources */,
 				A60A9DD31425389B00A65B3D /* ApplicationView.xib in Resources */,
+				04789F421448849600CD0265 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,6 +691,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		04789F401448849600CD0265 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04789F411448849600CD0265 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		A692E41C1425349A00A52229 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

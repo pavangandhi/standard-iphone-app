@@ -10,6 +10,11 @@
 #import <AVFoundation/AVFoundation.h>
 #import "AsyncUIImage.h"
 
+// LANG(@"KEY",nil);
+// COMMANDLINE genstrings -s LANG -o standard-iphone-app/en.lproj/ *.m
+#define LANG(key,comment) [[NSBundle mainBundle] localizedStringForKey:(key) value:(comment) table:nil]
+
+
 @interface CategoriesView : UIViewController <UITabBarDelegate> {
     ComplexTableView *tbl_categories;
 }
