@@ -7,16 +7,20 @@
 //
 
 #import "CategoriesView.h"
-#import "ActionSheet.h"
-#import "AlertView.h"
 #import "AppInformation.h"
+
+
 
 @implementation CategoriesView
 
 -(void) loadView {
+	
+	
     [super loadView];
     [self createTable];
     self.title = @"Test";
+	
+	NSLog(@"%@",LANG(@"Willkommen zu Hause",nil));
 	
 	NSLog(@"App Displayname: %@",[AppInformation getAppName]);
 	NSLog(@"App Identifier: %@",[AppInformation getAppIdentifier]);
