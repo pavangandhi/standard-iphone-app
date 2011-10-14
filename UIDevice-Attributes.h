@@ -17,4 +17,5 @@
 + (BOOL) hasDeviceFrontCamera;
 + (NSString *)getOSVersionBuild;
 + (NSString *)deviceIdentifier;
++ (NSString*) platformType;
 @end

@@ -33,6 +33,7 @@
 		04ECB74D1445840A00FCB8CC /* DCStatusBarOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ECB7491445840A00FCB8CC /* DCStatusBarOverlay.m */; };
 		04ECB75E144584DE00FCB8CC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ECB75D144584DE00FCB8CC /* QuartzCore.framework */; };
 		04ECB763144585D900FCB8CC /* LKBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ECB762144585D900FCB8CC /* LKBadgeView.m */; };
+		04EDFE2C144829CE004E256B /* AppSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EDFE2B144829CE004E256B /* AppSettingsManager.m */; };
 		A60A9DAB142536A800A65B3D /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A9D6C142536A800A65B3D /* ASIAuthenticationDialog.m */; };
 		A60A9DAC142536A800A65B3D /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A9D6F142536A800A65B3D /* ASIDataCompressor.m */; };
 		A60A9DAD142536A800A65B3D /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A9D71142536A800A65B3D /* ASIDataDecompressor.m */; };
@@ -132,6 +133,8 @@
 		04ECB75D144584DE00FCB8CC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		04ECB761144585D900FCB8CC /* LKBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKBadgeView.h; sourceTree = "<group>"; };
 		04ECB762144585D900FCB8CC /* LKBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKBadgeView.m; sourceTree = "<group>"; };
+		04EDFE2A144829CE004E256B /* AppSettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSettingsManager.h; sourceTree = "<group>"; };
+		04EDFE2B144829CE004E256B /* AppSettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSettingsManager.m; sourceTree = "<group>"; };
 		A60A9D6B142536A800A65B3D /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		A60A9D6C142536A800A65B3D /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		A60A9D6D142536A800A65B3D /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -351,6 +354,24 @@
 			name = Introspect;
 			sourceTree = "<group>";
 		};
+		04EDFE29144829B5004E256B /* AppSettingsManager */ = {
+			isa = PBXGroup;
+			children = (
+				04EDFE2A144829CE004E256B /* AppSettingsManager.h */,
+				04EDFE2B144829CE004E256B /* AppSettingsManager.m */,
+			);
+			name = AppSettingsManager;
+			sourceTree = "<group>";
+		};
+		04EDFEC614484CF6004E256B /* AppInformation */ = {
+			isa = PBXGroup;
+			children = (
+				04A1268914473AE100394AB1 /* AppInformation.h */,
+				04A1268A14473AE100394AB1 /* AppInformation.m */,
+			);
+			name = AppInformation;
+			sourceTree = "<group>";
+		};
 		A60A9D62142535DB00A65B3D /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +489,8 @@
 		A60A9DE714253E0700A65B3D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				04EDFEC614484CF6004E256B /* AppInformation */,
+				04EDFE29144829B5004E256B /* AppSettingsManager */,
 				0432613E1445F5AD00EF7ACA /* FTCoreText */,
 				043260FE1445F48400EF7ACA /* AnimatedLabel */,
 				A60A9D671425363E00A65B3D /* ComplexTableView */,
@@ -482,8 +505,6 @@
 				A6C749CB142611D9006B88DD /* ActionSheet.m */,
 				A6C749CD14261D54006B88DD /* AlertView.h */,
 				A6C749CE14261D54006B88DD /* AlertView.m */,
-				04A1268914473AE100394AB1 /* AppInformation.h */,
-				04A1268A14473AE100394AB1 /* AppInformation.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -500,6 +521,7 @@
 		A692E4041425349900A52229 = {
 			isa = PBXGroup;
 			children = (
+				A692E4191425349A00A52229 /* Main */,
 				A60A9DE714253E0700A65B3D /* Classes */,
 				A60A9D65142535F800A65B3D /* Database */,
 				A60A9D681425364700A65B3D /* Extensions */,
@@ -507,7 +529,6 @@
 				A60A9D63142535E500A65B3D /* Views */,
 				A60A9D62142535DB00A65B3D /* Network */,
 				A692E4121425349A00A52229 /* Frameworks */,
-				A692E4191425349A00A52229 /* Main */,
 				A692E4101425349A00A52229 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -677,6 +698,7 @@
 				0432614A1445F5B700EF7ACA /* UIView+Layout.m in Sources */,
 				043261561445F69300EF7ACA /* Example_FTCoreText.m in Sources */,
 				04A1268B14473AE100394AB1 /* AppInformation.m in Sources */,
+				04EDFE2C144829CE004E256B /* AppSettingsManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

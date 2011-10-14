@@ -8,6 +8,7 @@
 
 #import "AppInformation.h"
 #import "UIDevice-Attributes.h"
+#import "UserDefaults.h"
 
 @implementation AppInformation
 
@@ -46,4 +47,14 @@
 	return [[NSLocale currentLocale] localeIdentifier];
 }
 
++(NSString*) getPlatformType {
+	return [UIDevice  platformType];
+}
+
+
+
+
+
+
+	 
 @end

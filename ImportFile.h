@@ -6,11 +6,10 @@
 #import "ComplexTableSection.h"
 #import "ComplexTableView.h"
 #import "DBModel.h"
+#import "AppSettingsManager.h"
 
 #define Pad UIUserInterfaceIdiomPad 
 #define Phone UIUserInterfaceIdiomPhone 
 #define DeviceType [[UIDevice currentDevice] userInterfaceIdiom]
 
-#define isAppOrientationEnabled @"_isAppOrientationEnabled"
-#define standardBackgroundColor @"_standardBackgroundColor"
 #define CLEAR_OBJ(FIELD) [FIELD release]; FIELD = nil;

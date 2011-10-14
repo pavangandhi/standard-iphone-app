@@ -8,19 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface AppInformation : NSObject {
 
 }
 
++ (NSString*) getAppName;
++ (NSString*) getAppIdentifier;
++ (NSString*) getHardwareDevice;
++ (NSString*) getBuildVersion;
++ (NSString*) deviceIdentifer;
++ (NSString*) getSystemVersion;
++ (NSString*) getCurrentAppVersion;
++ (NSString*) getCurrentLocale;
++ (NSString*) getPlatformType;
 
-+(NSString*) getAppName;
-+(NSString*) getAppIdentifier;
-+(NSString*) getHardwareDevice;
-+(NSString*) getBuildVersion;
-+(NSString*) deviceIdentifer;
-+(NSString*) getSystemVersion;
-+(NSString*) getCurrentAppVersion;
-+(NSString*) getCurrentLocale;
 
 @end
