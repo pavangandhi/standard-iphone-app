@@ -15,9 +15,7 @@
 
 @synthesize tabbarController;
 
--(DBConnection*) getCurrentDBConnection {
-    return dbConnection;
-}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -26,14 +24,24 @@
 	[self loadInspector];
 	[self loadAppSettings];
 	
+	TBLCategories *test = [TBLCategories new];
+	test.categorieName = @"haha";
+	test.asdf = @"123";
+	test.anzahl = 33;
+	test.kaufdatum = [NSDate date];
+	test.preis = 23.234;
+	[test save];	
+	
     [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(onSlashScreenExpired) userInfo:nil repeats:NO];	
 
     return YES;
 }
 
+
 -(void) loadDatabase {
-	// Erstelle eine SQLite Datenbank
-    dbConnection = [DBConnection new];
+	[[Database sharedManager] open];
+	[[Database sharedManager] setDebugMode:YES];
+	[[Database sharedManager] setSyncMode:YES];
 }
 
 -(void) loadSplashView {
@@ -61,10 +69,9 @@
 
 -(void) loadAppSettings {
 	
-	NSInteger latestVersionID = [[AppSettingsManager sharedManager] getVersionNumberBeforeUpdate];
-	
-	// 10001 => 1.00.01
-	[[AppSettingsManager sharedManager] setVersionNumber:10002];
+	NSInteger versionIDBeforeUpdate = [[AppSettingsManager sharedManager] getVersionNumberBeforeUpdate];
+	[[AppSettingsManager sharedManager] setVersionNumber:@"1.0.03"];
+	NSInteger versionIDAfterUpdate = [[AppSettingsManager sharedManager] getIntegerVersionNumber];
 	
 	// Set if App is a full version
 	[[AppSettingsManager sharedManager] setIsProVersion:YES];
@@ -79,21 +86,27 @@
 		[[AppSettingsManager sharedManager] setIsOrientationEnabled:NO];
 	}
 	
+	NSLog(@"%@",[[AppSettingsManager sharedManager] getVersionsList]);
+	NSLog(@"%@",[[AppSettingsManager sharedManager] getStringVersionNumber]);
+	
 	// Check if start is an update
 	if([[AppSettingsManager sharedManager] isUpdate] == TRUE) {
 		
-		if(latestVersionID == 10001) {
-			NSLog(@"UDATE FROM 10001 TO 10002");
+		if(versionIDBeforeUpdate == 1001 && versionIDAfterUpdate == 1002) {
+			NSLog(@"UDATE FROM 1001 TO 1002");
 		}
-		else if(latestVersionID == 10002) {
-			NSLog(@"UDATE FROM 10002 TO 10003");
+		else if(versionIDBeforeUpdate == 1001 && versionIDAfterUpdate == 1003) {
+			NSLog(@"UDATE FROM 1001 TO 1003");
 		}
-		else if(latestVersionID == 10003) {
-			NSLog(@"UDATE FROM 10003 TO 10004");
+		else if(versionIDBeforeUpdate == 1001 && versionIDAfterUpdate == 1004) {
+			NSLog(@"UDATE FROM 1001 TO 1004");
 		}				
-		else if(latestVersionID == 10004) {
-			NSLog(@"UDATE FROM 10004 TO 10005");
+		else if(versionIDBeforeUpdate == 1002 && versionIDAfterUpdate == 1003) {
+			NSLog(@"UDATE FROM 1002 TO 1003");
 		}
+		else if(versionIDBeforeUpdate == 1002 && versionIDAfterUpdate == 1004) {
+			NSLog(@"UDATE FROM 1002 TO 1004");
+		}		
 	}		
 }
 

@@ -26,6 +26,7 @@
 		0432614A1445F5B700EF7ACA /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 043261461445F5B700EF7ACA /* UIView+Layout.m */; };
 		043261561445F69300EF7ACA /* Example_FTCoreText.m in Sources */ = {isa = PBXBuildFile; fileRef = 043261551445F69300EF7ACA /* Example_FTCoreText.m */; };
 		04789F421448849600CD0265 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04789F401448849600CD0265 /* Localizable.strings */; };
+		0487FA7F144C435C003E48E2 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 0487FA7E144C435C003E48E2 /* Database.m */; };
 		04A1268B14473AE100394AB1 /* AppInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1268A14473AE100394AB1 /* AppInformation.m */; };
 		04A1272414473EBC00394AB1 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A1272314473EBC00394AB1 /* CoreText.framework */; };
 		04ECB74A1445840A00FCB8CC /* DCCrossHairView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ECB7421445840A00FCB8CC /* DCCrossHairView.m */; };
@@ -48,7 +49,6 @@
 		A60A9DB5142536A800A65B3D /* ComplexTableSection.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A9D84142536A800A65B3D /* ComplexTableSection.m */; };
 		A60A9DB6142536A800A65B3D /* ComplexTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A9D86142536A800A65B3D /* ComplexTableView.m */; };
 		A60A9DB7142536A800A65B3D /* UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A9D88142536A800A65B3D /* UserDefaults.m */; };
-		A60A9DB8142536A800A65B3D /* DBConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A9D8A142536A800A65B3D /* DBConnection.m */; };
 		A60A9DB9142536A800A65B3D /* DBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A9D8C142536A800A65B3D /* DBModel.m */; };
 		A60A9DBC142536A800A65B3D /* InternetConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A9D93142536A800A65B3D /* InternetConnection.m */; };
 		A60A9DBE142536A800A65B3D /* NSDate-Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A9D96142536A800A65B3D /* NSDate-Extensions.m */; };
@@ -117,6 +117,8 @@
 		043261541445F69300EF7ACA /* Example_FTCoreText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example_FTCoreText.h; sourceTree = "<group>"; };
 		043261551445F69300EF7ACA /* Example_FTCoreText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example_FTCoreText.m; sourceTree = "<group>"; };
 		04789F411448849600CD0265 /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0487FA7D144C435C003E48E2 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
+		0487FA7E144C435C003E48E2 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
 		04A1268914473AE100394AB1 /* AppInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInformation.h; sourceTree = "<group>"; };
 		04A1268A14473AE100394AB1 /* AppInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInformation.m; sourceTree = "<group>"; };
 		04A1272314473EBC00394AB1 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -164,8 +166,6 @@
 		A60A9D86142536A800A65B3D /* ComplexTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComplexTableView.m; sourceTree = "<group>"; };
 		A60A9D87142536A800A65B3D /* UserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaults.h; sourceTree = "<group>"; };
 		A60A9D88142536A800A65B3D /* UserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaults.m; sourceTree = "<group>"; };
-		A60A9D89142536A800A65B3D /* DBConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBConnection.h; sourceTree = "<group>"; };
-		A60A9D8A142536A800A65B3D /* DBConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBConnection.m; sourceTree = "<group>"; };
 		A60A9D8B142536A800A65B3D /* DBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBModel.h; sourceTree = "<group>"; };
 		A60A9D8C142536A800A65B3D /* DBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBModel.m; sourceTree = "<group>"; };
 		A60A9D91142536A800A65B3D /* ImportFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImportFile.h; path = ../ImportFile.h; sourceTree = "<group>"; };
@@ -331,6 +331,27 @@
 			name = FTCoreText;
 			sourceTree = "<group>";
 		};
+		0487FA60144C303B003E48E2 /* Foundation-Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A60A9D95142536A800A65B3D /* NSDate-Extensions.h */,
+				A60A9D96142536A800A65B3D /* NSDate-Extensions.m */,
+				A60A9D97142536A800A65B3D /* NSString-Extensions.h */,
+				A60A9D98142536A800A65B3D /* NSString-Extensions.m */,
+				A60A9DA3142536A800A65B3D /* UIColor-Extensions.h */,
+				A60A9DA4142536A800A65B3D /* UIColor-Extensions.m */,
+				A60A9DA5142536A800A65B3D /* UIDevice-Attributes.h */,
+				A60A9DA6142536A800A65B3D /* UIDevice-Attributes.m */,
+				A60A9E141425699F00A65B3D /* UIImage-Extensions.h */,
+				A60A9E151425699F00A65B3D /* UIImage-Extensions.m */,
+				A60A9E2114257A3200A65B3D /* NSData-Extensions.h */,
+				A60A9E2214257A3300A65B3D /* NSData-Extensions.m */,
+				A60A9E341425853E00A65B3D /* NSTimer-Extensions.h */,
+				A60A9E351425853E00A65B3D /* NSTimer-Extensions.m */,
+			);
+			name = "Foundation-Extensions";
+			sourceTree = "<group>";
+		};
 		04ECB73F144583FA00FCB8CC /* Introspect */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,17 +386,17 @@
 			name = AppInformation;
 			sourceTree = "<group>";
 		};
-		A60A9D62142535DB00A65B3D /* Network */ = {
+		A60A9D62142535DB00A65B3D /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				A60A9E1A1425791D00A65B3D /* JSONKit */,
 				A60A9D6A1425367700A65B3D /* InternetConnection */,
 				A60A9D691425366F00A65B3D /* ASI-HTTP */,
 			);
-			name = Network;
+			name = Networking;
 			sourceTree = "<group>";
 		};
-		A60A9D63142535E500A65B3D /* Views */ = {
+		A60A9D63142535E500A65B3D /* ViewsControllers */ = {
 			isa = PBXGroup;
 			children = (
 				A60A9D7F142536A800A65B3D /* CategoriesView.h */,
@@ -383,25 +404,25 @@
 				A60A9D9F142536A800A65B3D /* SplashView.h */,
 				A60A9DA0142536A800A65B3D /* SplashView.m */,
 			);
-			name = Views;
+			name = ViewsControllers;
 			sourceTree = "<group>";
 		};
-		A60A9D64142535EE00A65B3D /* Tables */ = {
+		A60A9D64142535EE00A65B3D /* SQLTables */ = {
 			isa = PBXGroup;
 			children = (
 				A60A9DA1142536A800A65B3D /* TBLCategories.h */,
 				A60A9DA2142536A800A65B3D /* TBLCategories.m */,
 			);
-			name = Tables;
+			name = SQLTables;
 			sourceTree = "<group>";
 		};
 		A60A9D65142535F800A65B3D /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				A60A9D89142536A800A65B3D /* DBConnection.h */,
-				A60A9D8A142536A800A65B3D /* DBConnection.m */,
 				A60A9D8B142536A800A65B3D /* DBModel.h */,
 				A60A9D8C142536A800A65B3D /* DBModel.m */,
+				0487FA7D144C435C003E48E2 /* Database.h */,
+				0487FA7E144C435C003E48E2 /* Database.m */,
 			);
 			name = Database;
 			sourceTree = "<group>";
@@ -422,21 +443,8 @@
 		A60A9D681425364700A65B3D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0487FA60144C303B003E48E2 /* Foundation-Extensions */,
 				04200772142A3FE300EE6F4F /* Blocks-Extensions */,
-				A60A9D95142536A800A65B3D /* NSDate-Extensions.h */,
-				A60A9D96142536A800A65B3D /* NSDate-Extensions.m */,
-				A60A9D97142536A800A65B3D /* NSString-Extensions.h */,
-				A60A9D98142536A800A65B3D /* NSString-Extensions.m */,
-				A60A9DA3142536A800A65B3D /* UIColor-Extensions.h */,
-				A60A9DA4142536A800A65B3D /* UIColor-Extensions.m */,
-				A60A9DA5142536A800A65B3D /* UIDevice-Attributes.h */,
-				A60A9DA6142536A800A65B3D /* UIDevice-Attributes.m */,
-				A60A9E141425699F00A65B3D /* UIImage-Extensions.h */,
-				A60A9E151425699F00A65B3D /* UIImage-Extensions.m */,
-				A60A9E2114257A3200A65B3D /* NSData-Extensions.h */,
-				A60A9E2214257A3300A65B3D /* NSData-Extensions.m */,
-				A60A9E341425853E00A65B3D /* NSTimer-Extensions.h */,
-				A60A9E351425853E00A65B3D /* NSTimer-Extensions.m */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -482,16 +490,17 @@
 		A60A9DE714253E0700A65B3D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				043260FC1445F2C300EF7ACA /* AsyncUIImage */,
+				043260FE1445F48400EF7ACA /* AnimatedLabel */,
 				04EDFEC614484CF6004E256B /* AppInformation */,
 				04EDFE29144829B5004E256B /* AppSettingsManager */,
-				0432613E1445F5AD00EF7ACA /* FTCoreText */,
-				043260FE1445F48400EF7ACA /* AnimatedLabel */,
-				A60A9D671425363E00A65B3D /* ComplexTableView */,
-				043260FD1445F2D000EF7ACA /* Cipher */,
-				043260FC1445F2C300EF7ACA /* AsyncUIImage */,
-				043260FB1445F2B300EF7ACA /* UserDefaults */,
 				043260FA1445F28100EF7ACA /* BadgeView */,
+				043260FD1445F2D000EF7ACA /* Cipher */,
+				A60A9D671425363E00A65B3D /* ComplexTableView */,
+				A60A9D65142535F800A65B3D /* Database */,
+				0432613E1445F5AD00EF7ACA /* FTCoreText */,
 				04ECB73F144583FA00FCB8CC /* Introspect */,
+				043260FB1445F2B300EF7ACA /* UserDefaults */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -510,11 +519,10 @@
 			children = (
 				A692E4191425349A00A52229 /* Main */,
 				A60A9DE714253E0700A65B3D /* Classes */,
-				A60A9D65142535F800A65B3D /* Database */,
 				A60A9D681425364700A65B3D /* Extensions */,
-				A60A9D64142535EE00A65B3D /* Tables */,
-				A60A9D63142535E500A65B3D /* Views */,
-				A60A9D62142535DB00A65B3D /* Network */,
+				A60A9D64142535EE00A65B3D /* SQLTables */,
+				A60A9D63142535E500A65B3D /* ViewsControllers */,
+				A60A9D62142535DB00A65B3D /* Networking */,
 				A692E4121425349A00A52229 /* Frameworks */,
 				A692E4101425349A00A52229 /* Products */,
 			);
@@ -644,7 +652,6 @@
 				A60A9DB5142536A800A65B3D /* ComplexTableSection.m in Sources */,
 				A60A9DB6142536A800A65B3D /* ComplexTableView.m in Sources */,
 				A60A9DB7142536A800A65B3D /* UserDefaults.m in Sources */,
-				A60A9DB8142536A800A65B3D /* DBConnection.m in Sources */,
 				A60A9DB9142536A800A65B3D /* DBModel.m in Sources */,
 				A60A9DBC142536A800A65B3D /* InternetConnection.m in Sources */,
 				A60A9DBE142536A800A65B3D /* NSDate-Extensions.m in Sources */,
@@ -685,6 +692,7 @@
 				043261561445F69300EF7ACA /* Example_FTCoreText.m in Sources */,
 				04A1268B14473AE100394AB1 /* AppInformation.m in Sources */,
 				04EDFE2C144829CE004E256B /* AppSettingsManager.m in Sources */,
+				0487FA7F144C435C003E48E2 /* Database.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
