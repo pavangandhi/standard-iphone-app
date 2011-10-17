@@ -23,15 +23,53 @@
  * @return AppSettingsManger instance
  */
 
+static AppSettingsManager *settingsManager = nil;
+
 + (AppSettingsManager *)sharedManager {
-	static AppSettingsManager *settingsManager = nil;
-	
+
 	if (settingsManager == nil) {
-		settingsManager = [[AppSettingsManager alloc] init];
+		settingsManager = [[super allocWithZone:NULL] init];
 	}
-	
+		
 	return settingsManager;
 }
+
+
++ (id)allocWithZone:(NSZone *)zone
+{
+    return [[self sharedManager] retain];
+}
+
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    return self;
+}
+
+- (id)retain
+{
+    return self;
+}
+
+- (NSUInteger)retainCount
+{
+    return NSUIntegerMax;  //denotes an object that cannot be released
+}
+
+- (void)release
+{
+    //do nothing
+}
+
+- (id)autorelease
+{
+    return self;
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////// SINGLETON END /////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
 
 
 -(void) setIsProVersion:(BOOL) yesNo {
@@ -49,10 +87,15 @@
  */
 
 
--(NSInteger) getVersionNumber {
-	return [UserDefaults getIntegerForKey:APP_VERSION_NUMBER];
+-(NSString*) getStringVersionNumber {
+	return [UserDefaults getStringForKey:APP_VERSION_NUMBER];
 }
 
+-(NSInteger) getIntegerVersionNumber {
+	NSString *s_version = [self getStringVersionNumber];
+	s_version = [s_version stringByReplacingOccurrencesOfString:@"." withString:@""];
+	return [s_version intValue];
+}
 
 
 /**
@@ -62,22 +105,21 @@
  */
 
 
--(BOOL) setVersionNumber:(NSInteger) version_number {
+-(BOOL) setVersionNumber:(NSString*) version_number {
 
-	NSNumber *versionNumber = [NSNumber numberWithInt:version_number];
 	NSMutableArray *versionsList = [self getVersionsList];
 	
 	if(versionsList == nil) {
-		versionsList = [NSArray arrayWithObject:versionNumber];
+		versionsList = [NSArray arrayWithObject:version_number];
 		_isFirstStart = TRUE;
 	} else {
-		if(![versionsList containsObject:versionNumber]) {
+		if(![versionsList containsObject:version_number]) {
 			_isUpdate = TRUE;
-			[versionsList addObject:versionNumber];
+			[versionsList addObject:version_number];
 		}
 	}
 	[UserDefaults setArray:versionsList forKey:APP_VERSIONS_LIST];
-	return [UserDefaults setInteger:version_number forKey:APP_VERSION_NUMBER];
+	return [UserDefaults setString:version_number forKey:APP_VERSION_NUMBER];
 }	 
 
 
@@ -97,8 +139,10 @@
 	NSMutableArray *versionList = [self getVersionsList];
 	
 	int maxValue = 0;
-	for (NSNumber *version in versionList)
+	for (NSString *version in versionList)
 	{
+		version = [version stringByReplacingOccurrencesOfString:@"." withString:@""];
+		
 		int currentValue = [version intValue];
 		if (currentValue > maxValue)
 			maxValue = currentValue;

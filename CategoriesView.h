@@ -9,6 +9,7 @@
 #import "ImportFile.h"
 #import <AVFoundation/AVFoundation.h>
 #import "AsyncUIImage.h"
+#import "TBLCategories.h"
 
 // LANG(@"KEY",nil);
 // COMMANDLINE genstrings -s LANG -o standard-iphone-app/en.lproj/ *.m

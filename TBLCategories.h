@@ -11,13 +11,17 @@
 
 @interface TBLCategories : DBModel {
     NSString *categorieName;
-    NSDate *createdAt;
     NSString *asdf;
+	NSDate *kaufdatum;
+	int anzahl;
+	float preis;
 }
 
 @property (nonatomic,retain) NSString *categorieName;
-@property (nonatomic,retain) NSDate *createdAt;
-@property (nonatomic,retain)  NSString *asdf;
+@property (nonatomic,retain) NSString *asdf;
+@property (nonatomic,retain) NSDate *kaufdatum;
+@property (nonatomic) int anzahl;
+@property (nonatomic) float preis;
 
 +(NSArray *)indices;
 

@@ -21,9 +21,11 @@
 
 -(NSMutableArray*) getVersionsList;
 -(NSInteger) getVersionNumberBeforeUpdate; 
+-(NSString*) getStringVersionNumber;
+-(NSInteger) getIntegerVersionNumber;
 -(BOOL) isUpdate;
 -(BOOL) isFirstStart;
--(BOOL) setVersionNumber:(NSInteger) version_number;
+-(BOOL) setVersionNumber:(NSString*) version_number;
 -(BOOL) setDefaultViewBackgroundColor:(UIColor*)color;
 -(UIColor*) getDefaultViewBackgroundColor;
 -(BOOL) setIsOrientationEnabled:(BOOL)yesNo;

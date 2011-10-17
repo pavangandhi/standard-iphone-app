@@ -51,10 +51,5 @@
 	return [UIDevice  platformType];
 }
 
-
-
-
-
-
-	 
+ 
 @end

@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DBConnection.h"
+#import "Database.h"
 #import "AppSettingsManager.h"
 #import "CategoriesView.h"
 #import "SplashView.h"
 
 @interface standard_iphone_appDelegate : NSObject <UIApplicationDelegate> {
-    DBConnection *dbConnection;
+
     UITabBarController *tabbarController;
     SplashView *splashView;
 }
@@ -22,7 +22,6 @@
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UITabBarController *tabbarController;
 
--(DBConnection*) getCurrentDBConnection;
 -(void) loadDatabase;
 -(void) loadSplashView;
 -(void) loadInspector;

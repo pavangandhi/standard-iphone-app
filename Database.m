@@ -1,69 +1,94 @@
 //
-//  DBConnection.m
-//  meinInventar
+//  Database.m
+//  standard-iphone-app
 //
-//  Created by Alexander on 12.08.11.
+//  Created by Alexander on 17.10.11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "DBConnection.h"
+#import "Database.h"
 
-@interface DBConnection(PrivateMethods)
-- (void) open;
+@interface Database(PrivateMethods)
 - (void) initDatabase;
 - (void) checkAllTables;
 @end
 
-@implementation DBConnection
+@implementation Database
+
+/**
+ * Creates a singleton instance
+ *
+ * @return AppSettingsManger instance
+ */
+
+static Database *databaseManager = nil;
+
++ (Database *)sharedManager {
+	
+	if (databaseManager == nil) {
+		databaseManager = [[super allocWithZone:NULL] init];
+	}
+	
+	return databaseManager;
+}
+
+
++ (id)allocWithZone:(NSZone *)zone
+{
+    return [[self sharedManager] retain];
+}
+
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    return self;
+}
+
+- (id)retain
+{
+    return self;
+}
+
+- (NSUInteger)retainCount
+{
+    return NSUIntegerMax;  //denotes an object that cannot be released
+}
+
+- (void)release
+{
+    //do nothing
+}
+
+- (id)autorelease
+{
+    return self;
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////// SINGLETON END /////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
 
 
 #pragma mark -
 
-/*
-    Erstellt eine Datenbank, falls keine vorhanden ist, initialisiert und prüft die Datenbank
-*/
-
-- (id) init
-{
-	if(self == [super init])
-	{
-		NSString *filename = @"db.sqlite";
-		NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-		
-        pathToDatabase = [[NSString alloc] initWithFormat:@"%@",[[paths objectAtIndex:0] stringByAppendingPathComponent:filename]];
-        checkedTables = [[NSMutableArray alloc] init];
-        
-        [self open];
-        [self initDatabase];
-        [self checkAllTables];
-	}
-	
-	return self;
-}
-
-
-
-
 
 
 /*
-    Gibt die aktuelle Datenbank zurück
+ Öffnet eine Datenbank
  */
-
--(sqlite3*) getDatabase {
-    return database;
-}
-
-
-
-
-
-/*
-    Öffnet eine Datenbank
-*/
 
 - (void) open
 {
+	[self initDatabase];
+	[self checkAllTables];		
+	
+	NSString *filename = @"database.sqlite";
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	
+	pathToDatabase = [[NSString alloc] initWithFormat:@"%@",[[paths objectAtIndex:0] stringByAppendingPathComponent:filename]];
+	checkedTables = [[NSMutableArray alloc] init];
+	
 	if(debugging == TRUE) {
 		NSLog(@"Database-filepath: %@",pathToDatabase);
 	}
@@ -82,12 +107,39 @@
 }
 
 
+-(void) setDebugMode:(BOOL) yesNo {
+	debugging = yesNo;
+}
+
+-(BOOL) getDebugMode {
+	return debugging;
+}
+
+-(void) setSyncMode:(BOOL) yesNo {
+	syncMode = yesNo;
+}
+
+-(BOOL) getSyncMode {
+	return syncMode;
+}
+
+
+/*
+ Gibt die aktuelle Datenbank zurück
+ */
+
+-(sqlite3*) getSqliteDatabase {
+    return database;
+}
+
+
+
 
 
 
 /*
-    Schließt die aktuelle Datenbank
-*/
+ Schließt die aktuelle Datenbank
+ */
 
 - (void) close
 {
@@ -108,11 +160,11 @@
 
 
 /*
-    Führt eine SQL-Anweisung aus und liefert einen boolischen Wert zurück
-*/
+ Führt eine SQL-Anweisung aus und liefert einen boolischen Wert zurück
+ */
 
 -(BOOL) executeUpdateQuery:(NSString*) s_query {
-	if (sqlite3_exec ([self getDatabase], [s_query UTF8String], NULL, NULL, NULL) != SQLITE_OK) {
+	if (sqlite3_exec (database, [s_query UTF8String], NULL, NULL, NULL) != SQLITE_OK) {
         return FALSE;
     }
     return TRUE;
@@ -123,8 +175,8 @@
 
 
 /*
-    Führt notwendige SQL-Anweisungen aus
-*/
+ Führt notwendige SQL-Anweisungen aus
+ */
 
 -(void) initDatabase {
     [self executeUpdateQuery:@"PRAGMA encoding = \"UTF-8\""];
@@ -137,8 +189,8 @@
 
 
 /*
-    Prüft ob Tabellen in der Datenbank korrupt sind, wenn ja, werden diese repariert
-*/
+ Prüft ob Tabellen in der Datenbank korrupt sind, wenn ja, werden diese repariert
+ */
 
 - (void)checkAllTables
 {
@@ -178,8 +230,8 @@
 
 
 /*
-    Fügt den String einer Tabelle zu den geprüften Tabellen in Array hinzu
-*/
+ Fügt den String einer Tabelle zu den geprüften Tabellen in Array hinzu
+ */
 
 -(void) addCheckedTable:(NSString*)tableName {
     [checkedTables addObject:tableName];
@@ -190,8 +242,8 @@
 
 
 /*
-    Prüft ob eine Tabelle bereits geprüft ist
-*/
+ Prüft ob eine Tabelle bereits geprüft ist
+ */
 
 -(BOOL) didCheckTable:(NSString*)tableName {
     return [checkedTables containsObject:tableName];
@@ -202,8 +254,8 @@
 
 
 /*
-    Prüft ob eine Tabelle existiert
-*/
+ Prüft ob eine Tabelle existiert
+ */
 
 - (BOOL)tableExists:(NSString *)tableName
 {
@@ -221,10 +273,12 @@
 
 
 /** 
-    Durchsucht Datenbank nach übergebene SQL-Anweisung und gibt die Daten in einem Array zurück
- */
+ Durchsucht Datenbank nach übergebene SQL-Anweisung und gibt die Daten in einem Array zurück
+*/
 
--(NSArray*) findByCriteria:(NSString*) query {
+
+
+-(NSArray*) findByQuery:(NSString*) query {
 	NSMutableArray *ret = [NSMutableArray array];
 	
 	sqlite3_stmt *statement;
@@ -240,13 +294,13 @@
 				NSString *columnName = [NSString stringWithUTF8String:sqlite3_column_name(statement, i)];
                 id colData = nil;
                 const char *columnText = (const char *)sqlite3_column_text(statement, i);
-                    
+				
                 if (NULL != columnText) {
                     colData = [NSString stringWithUTF8String:columnText];
                 }
-                    
+				
                 free((void*)columnText);
-                    
+				
                 [oneItem setValue:colData forKey:columnName];
 			}
 			
@@ -261,12 +315,17 @@
 	}
     
     if(debugging == YES) {
-        NSLog(@"SUCCESS: selecting data - count: %i\nSQL: %@",[ret count],query);
+        NSLog(@"SUCCESS: selecting data - count: %i - SQL: %@",[ret count],query);
     }
     
 	sqlite3_finalize(statement);
+	
+	if([ret count] == 0) return nil;
+	
 	return ret;
 }
+
+
 
 
 

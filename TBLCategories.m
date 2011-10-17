@@ -11,12 +11,14 @@
 
 @implementation TBLCategories
 @synthesize categorieName;
-@synthesize createdAt;
 @synthesize asdf;
+@synthesize anzahl;
+@synthesize kaufdatum;
+@synthesize preis;
 
 +(NSArray *)indices {
-    NSArray *one = [NSArray arrayWithObjects:@"categorieName",@"createdAt", nil];
-    NSArray *two = [NSArray arrayWithObjects:@"createdAt",@"asdf", nil];
+    NSArray *one = [NSArray arrayWithObjects:@"categorieName", nil];
+    NSArray *two = [NSArray arrayWithObjects:@"asdf", nil];
     return [NSArray arrayWithObjects:one,two, nil];
 }
 
