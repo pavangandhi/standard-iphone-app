@@ -34,5 +34,4 @@
 -(UIColor*) getDefaultNavigationControllerTintColor;
 -(void) setIsProVersion:(BOOL) yesNo;
 -(BOOL) isPROVersion;
-
 @end

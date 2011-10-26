@@ -11,5 +11,23 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>   
-    #import "standard_iphone_AppDelegate.h"
+
+    #import "UserDefaults.h"
+
+    #import "ComplexTableCell.h"
+    #import "ComplexTableSection.h"
+    #import "ComplexTableView.h"
+
+    #import "AppLanguageClass.h"
+    #import "AppSettingsManager.h"
+
+    #import "Database.h"
+    #import "DBModel.h"
+
+    #define Pad UIUserInterfaceIdiomPad 
+    #define Phone UIUserInterfaceIdiomPhone 
+    #define DeviceType [[UIDevice currentDevice] userInterfaceIdiom]
+
+    #define CLEAR_OBJ(FIELD) [FIELD release]; FIELD = nil;
+
 #endif

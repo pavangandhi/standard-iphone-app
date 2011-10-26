@@ -17,6 +17,7 @@
 	sqlite3 *database;
     NSMutableArray *checkedTables;
 	BOOL syncMode;
+    NSString *tablePrefix;
 }
 
 + (Database *)sharedManager;

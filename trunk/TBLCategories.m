@@ -19,7 +19,10 @@
 +(NSArray *)indices {
     NSArray *one = [NSArray arrayWithObjects:@"categorieName", nil];
     NSArray *two = [NSArray arrayWithObjects:@"asdf", nil];
+
     return [NSArray arrayWithObjects:one,two, nil];
 }
+
+
 
 @end

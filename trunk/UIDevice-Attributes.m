@@ -41,8 +41,9 @@
     if ([platform isEqualToString:@"iPhone1,2"]) return @"iPhone 3G";
     if ([platform hasPrefix:@"iPhone2,1"]) return @"iPhone 3GS";
     if ([platform hasPrefix:@"iPhone3,1"]) return @"iPhone 4";
-    if ([platform hasPrefix:@"iPhone3,2"]) return @"iPhone 4S";	
-    if ([platform hasPrefix:@"iPhone4"]) return @"iPhone 5";
+    if ([platform hasPrefix:@"iPhone3,2"]) return @"iPhone 4 Verizon";	
+    if ([platform hasPrefix:@"iPhone3,2"]) return @"iPhone 4 Verizon";
+    if ([platform hasPrefix:@"iPhone4"]) return @"iPhone 4S";
     
     // iPod
     if ([platform hasPrefix:@"iPod1"]) return @"iPod 1G";

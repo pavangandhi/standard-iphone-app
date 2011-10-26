@@ -29,6 +29,12 @@
 		0487FA7F144C435C003E48E2 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 0487FA7E144C435C003E48E2 /* Database.m */; };
 		04A1268B14473AE100394AB1 /* AppInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1268A14473AE100394AB1 /* AppInformation.m */; };
 		04A1272414473EBC00394AB1 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A1272314473EBC00394AB1 /* CoreText.framework */; };
+		04AC22E41457F3AB00070D38 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AC22E31457F3AB00070D38 /* SSKeychain.m */; };
+		04AC22E61457F3DB00070D38 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04AC22E51457F3DB00070D38 /* Security.framework */; };
+		04AC22E81457F3F000070D38 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 04AC22E71457F3F000070D38 /* libz.1.2.5.dylib */; };
+		04AC22F71458000400070D38 /* AppLanguageClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AC22F61458000400070D38 /* AppLanguageClass.m */; };
+		04AC230214581B6300070D38 /* SelectionType.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AC230114581B6300070D38 /* SelectionType.m */; };
+		04AC230614581EA100070D38 /* Currency.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AC230514581EA100070D38 /* Currency.m */; };
 		04ECB74A1445840A00FCB8CC /* DCCrossHairView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ECB7421445840A00FCB8CC /* DCCrossHairView.m */; };
 		04ECB74B1445840A00FCB8CC /* DCFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ECB7441445840A00FCB8CC /* DCFrameView.m */; };
 		04ECB74C1445840A00FCB8CC /* DCIntrospect.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ECB7461445840A00FCB8CC /* DCIntrospect.m */; };
@@ -63,7 +69,6 @@
 		A60A9DCF142537E800A65B3D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60A9DCE142537E800A65B3D /* CFNetwork.framework */; };
 		A60A9DD1142537EF00A65B3D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A60A9DD0142537EF00A65B3D /* libsqlite3.0.dylib */; };
 		A60A9DD31425389B00A65B3D /* ApplicationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60A9DD21425389B00A65B3D /* ApplicationView.xib */; };
-		A60A9DE614253B4300A65B3D /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A60A9DE514253B4300A65B3D /* libz.1.2.3.dylib */; };
 		A60A9E161425699F00A65B3D /* UIImage-Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A9E151425699F00A65B3D /* UIImage-Extensions.m */; };
 		A60A9E1914256AE300A65B3D /* AsyncUIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A9E1814256AE300A65B3D /* AsyncUIImage.m */; };
 		A60A9E1D1425792900A65B3D /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A9E1C1425792900A65B3D /* JSONKit.m */; };
@@ -122,6 +127,16 @@
 		04A1268914473AE100394AB1 /* AppInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInformation.h; sourceTree = "<group>"; };
 		04A1268A14473AE100394AB1 /* AppInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInformation.m; sourceTree = "<group>"; };
 		04A1272314473EBC00394AB1 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		04AC22E21457F3AB00070D38 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
+		04AC22E31457F3AB00070D38 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
+		04AC22E51457F3DB00070D38 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		04AC22E71457F3F000070D38 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		04AC22F51458000400070D38 /* AppLanguageClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppLanguageClass.h; sourceTree = "<group>"; };
+		04AC22F61458000400070D38 /* AppLanguageClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppLanguageClass.m; sourceTree = "<group>"; };
+		04AC230014581B6300070D38 /* SelectionType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionType.h; sourceTree = "<group>"; };
+		04AC230114581B6300070D38 /* SelectionType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionType.m; sourceTree = "<group>"; };
+		04AC230414581EA100070D38 /* Currency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Currency.h; sourceTree = "<group>"; };
+		04AC230514581EA100070D38 /* Currency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Currency.m; sourceTree = "<group>"; };
 		04ECB7411445840A00FCB8CC /* DCCrossHairView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCrossHairView.h; sourceTree = "<group>"; };
 		04ECB7421445840A00FCB8CC /* DCCrossHairView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCCrossHairView.m; sourceTree = "<group>"; };
 		04ECB7431445840A00FCB8CC /* DCFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFrameView.h; sourceTree = "<group>"; };
@@ -168,7 +183,6 @@
 		A60A9D88142536A800A65B3D /* UserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaults.m; sourceTree = "<group>"; };
 		A60A9D8B142536A800A65B3D /* DBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBModel.h; sourceTree = "<group>"; };
 		A60A9D8C142536A800A65B3D /* DBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBModel.m; sourceTree = "<group>"; };
-		A60A9D91142536A800A65B3D /* ImportFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImportFile.h; path = ../ImportFile.h; sourceTree = "<group>"; };
 		A60A9D92142536A800A65B3D /* InternetConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InternetConnection.h; sourceTree = "<group>"; };
 		A60A9D93142536A800A65B3D /* InternetConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InternetConnection.m; sourceTree = "<group>"; };
 		A60A9D95142536A800A65B3D /* NSDate-Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate-Extensions.h"; sourceTree = "<group>"; };
@@ -190,7 +204,6 @@
 		A60A9DCE142537E800A65B3D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		A60A9DD0142537EF00A65B3D /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		A60A9DD21425389B00A65B3D /* ApplicationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationView.xib; sourceTree = "<group>"; };
-		A60A9DE514253B4300A65B3D /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
 		A60A9E141425699F00A65B3D /* UIImage-Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage-Extensions.h"; sourceTree = "<group>"; };
 		A60A9E151425699F00A65B3D /* UIImage-Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage-Extensions.m"; sourceTree = "<group>"; };
 		A60A9E1714256AE300A65B3D /* AsyncUIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUIImage.h; sourceTree = "<group>"; };
@@ -220,7 +233,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A60A9DE614253B4300A65B3D /* libz.1.2.3.dylib in Frameworks */,
+				04AC22E81457F3F000070D38 /* libz.1.2.5.dylib in Frameworks */,
+				04AC22E61457F3DB00070D38 /* Security.framework in Frameworks */,
 				A60A9DD1142537EF00A65B3D /* libsqlite3.0.dylib in Frameworks */,
 				A60A9DCF142537E800A65B3D /* CFNetwork.framework in Frameworks */,
 				A60A9DCD142537E100A65B3D /* SystemConfiguration.framework in Frameworks */,
@@ -350,6 +364,42 @@
 				A60A9E351425853E00A65B3D /* NSTimer-Extensions.m */,
 			);
 			name = "Foundation-Extensions";
+			sourceTree = "<group>";
+		};
+		04AC22E11457F39400070D38 /* KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				04AC22E21457F3AB00070D38 /* SSKeychain.h */,
+				04AC22E31457F3AB00070D38 /* SSKeychain.m */,
+			);
+			name = KeyChain;
+			sourceTree = "<group>";
+		};
+		04AC22F41457FFD600070D38 /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				04AC22F51458000400070D38 /* AppLanguageClass.h */,
+				04AC22F61458000400070D38 /* AppLanguageClass.m */,
+			);
+			name = Language;
+			sourceTree = "<group>";
+		};
+		04AC22FF14581B5000070D38 /* ListSelectionArray */ = {
+			isa = PBXGroup;
+			children = (
+				04AC230014581B6300070D38 /* SelectionType.h */,
+				04AC230114581B6300070D38 /* SelectionType.m */,
+			);
+			name = ListSelectionArray;
+			sourceTree = "<group>";
+		};
+		04AC230314581E7A00070D38 /* Currency */ = {
+			isa = PBXGroup;
+			children = (
+				04AC230414581EA100070D38 /* Currency.h */,
+				04AC230514581EA100070D38 /* Currency.m */,
+			);
+			name = Currency;
 			sourceTree = "<group>";
 		};
 		04ECB73F144583FA00FCB8CC /* Introspect */ = {
@@ -500,6 +550,10 @@
 				A60A9D65142535F800A65B3D /* Database */,
 				0432613E1445F5AD00EF7ACA /* FTCoreText */,
 				04ECB73F144583FA00FCB8CC /* Introspect */,
+				04AC22E11457F39400070D38 /* KeyChain */,
+				04AC22F41457FFD600070D38 /* Language */,
+				04AC230314581E7A00070D38 /* Currency */,
+				04AC22FF14581B5000070D38 /* ListSelectionArray */,
 				043260FB1445F2B300EF7ACA /* UserDefaults */,
 			);
 			name = Classes;
@@ -539,8 +593,9 @@
 		A692E4121425349A00A52229 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A60A9DE514253B4300A65B3D /* libz.1.2.3.dylib */,
+				04AC22E71457F3F000070D38 /* libz.1.2.5.dylib */,
 				A60A9DD0142537EF00A65B3D /* libsqlite3.0.dylib */,
+				04AC22E51457F3DB00070D38 /* Security.framework */,
 				A60A9DCE142537E800A65B3D /* CFNetwork.framework */,
 				A60A9DCC142537E100A65B3D /* SystemConfiguration.framework */,
 				A60A9DCA142537DA00A65B3D /* MobileCoreServices.framework */,
@@ -555,7 +610,6 @@
 		A692E4191425349A00A52229 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				A60A9D91142536A800A65B3D /* ImportFile.h */,
 				A692E4221425349A00A52229 /* standard_iphone_appDelegate.h */,
 				A692E4231425349A00A52229 /* standard_iphone_appDelegate.m */,
 				A60A9DD21425389B00A65B3D /* ApplicationView.xib */,
@@ -693,6 +747,10 @@
 				04A1268B14473AE100394AB1 /* AppInformation.m in Sources */,
 				04EDFE2C144829CE004E256B /* AppSettingsManager.m in Sources */,
 				0487FA7F144C435C003E48E2 /* Database.m in Sources */,
+				04AC22E41457F3AB00070D38 /* SSKeychain.m in Sources */,
+				04AC22F71458000400070D38 /* AppLanguageClass.m in Sources */,
+				04AC230214581B6300070D38 /* SelectionType.m in Sources */,
+				04AC230614581EA100070D38 /* Currency.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

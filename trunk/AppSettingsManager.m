@@ -15,6 +15,7 @@
 #define APP_VERSIONS_LIST @"_app_versions_list"
 #define APP_VERSION_NUMBER @"_app_version_number"
 
+
 @implementation AppSettingsManager
 
 /**
@@ -200,6 +201,13 @@ static AppSettingsManager *settingsManager = nil;
 -(UIColor*) getDefaultNavigationControllerTintColor {
 	return [UserDefaults getColorForKey:DEFAULT_NAVIGATION_CONTROLLER_TINT_COLOR];
 }
+
+
+
+
+
+
+
 
 
 
