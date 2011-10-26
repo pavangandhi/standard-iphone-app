@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DBModel.h"
+
 
 @interface TBLCategories : DBModel {
     NSString *categorieName;

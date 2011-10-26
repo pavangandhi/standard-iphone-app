@@ -80,9 +80,7 @@
 -(NSString*)nl2br {
     
     NSMutableString *tmp = (NSMutableString*)self;
-    
     tmp = [[tmp stringByReplacingOccurrencesOfString:@"\n" withString:@"<br/>"]mutableCopy];
-    
     NSString *retVal = [[[NSString alloc] initWithFormat:@"%@",tmp] autorelease];
     [tmp release];
     return retVal;

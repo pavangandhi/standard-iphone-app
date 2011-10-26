@@ -8,7 +8,7 @@
 
 #import "CategoriesView.h"
 #import "AppInformation.h"
-
+#import "Currency.h"
 
 
 @implementation CategoriesView
@@ -20,6 +20,13 @@
     [self createTable];
     self.title = @"Test";
 	
+    float zahl = 12.5;
+    NSLog(@"%@",[Currency stringFromFloat:zahl]);
+    
+    NSString *zahl2 = @"12.50";
+    NSLog(@"%f",[Currency floatFromString:zahl2]);
+    
+    
 	NSLog(@"%@",LANG(@"Willkommen zu Hause",nil));
 	
 	NSLog(@"App Displayname: %@",[AppInformation getAppName]);

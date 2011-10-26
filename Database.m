@@ -82,7 +82,8 @@ static Database *databaseManager = nil;
 {
 	[self initDatabase];
 	[self checkAllTables];		
-	
+	tablePrefix = [[NSString alloc] initWithString:@"TBL"];
+    
 	NSString *filename = @"database.sqlite";
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	
@@ -202,7 +203,7 @@ static Database *databaseManager = nil;
         {
             const char *columnText = (const char *)sqlite3_column_text(xLoopStmt,0);
             NSString *string = [NSString stringWithUTF8String:columnText];
-            NSRange range = [string rangeOfString : @"TBL"];
+            NSRange range = [string rangeOfString : tablePrefix];
             
             if (range.location != NSNotFound)
             {

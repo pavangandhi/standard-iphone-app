@@ -15,6 +15,7 @@
 + (id)objectWithSqlColumnRepresentation:(NSString *)columnData;
 {
     NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+    [dateFormatter setLocale:[NSLocale currentLocale]];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     return [dateFormatter dateFromString:columnData];
 }
@@ -22,6 +23,7 @@
 - (NSString *)sqlColumnRepresentationOfSelf
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setLocale:[NSLocale currentLocale]];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     
     NSString *formattedDateString = [dateFormatter stringFromDate:self];
@@ -29,6 +31,29 @@
     
     return formattedDateString;
 }
+
+
+
++ (NSDate*) getShortDateFromString:(NSString *)stringDate
+{
+    NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+    [dateFormatter setLocale:[NSLocale currentLocale]];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    return [dateFormatter dateFromString:stringDate];
+}
+
+- (NSString *) getShortDate  
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setLocale:[NSLocale currentLocale]];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    
+    NSString *formattedDateString = [dateFormatter stringFromDate:self];
+    [dateFormatter release];
+    
+    return formattedDateString;
+}
+
 
 /* DATE FUNCTIONS */
 

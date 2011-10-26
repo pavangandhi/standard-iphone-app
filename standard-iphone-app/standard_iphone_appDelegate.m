@@ -7,8 +7,7 @@
 //
 
 #import "standard_iphone_appDelegate.h"
-#import "DCIntrospect.h"
-#import "TBLCategories.h"
+
 
 @implementation standard_iphone_appDelegate
 @synthesize window=_window;
@@ -19,10 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	[self loadDatabase];
+    [self loadDatabase];
+	[self loadAppSettings];    
 	[self loadSplashView];
 	[self loadInspector];
-	[self loadAppSettings];
+
 	
 	TBLCategories *test = [TBLCategories new];
 	test.categorieName = @"haha";
@@ -43,6 +43,45 @@
 	[[Database sharedManager] setDebugMode:YES];
 	[[Database sharedManager] setSyncMode:YES];
 }
+
+
+-(void) loadAppSettings {
+	
+	NSInteger versionIDBeforeUpdate = [[AppSettingsManager sharedManager] getVersionNumberBeforeUpdate];
+    
+	[[AppSettingsManager sharedManager] setVersionNumber:@"1.0.01"];
+	NSInteger versionIDAfterUpdate = [[AppSettingsManager sharedManager] getIntegerVersionNumber];
+	
+	// Set if App is a full version
+	[[AppSettingsManager sharedManager] setIsProVersion:YES];
+	
+	// Check if apps starts the first time
+	if([[AppSettingsManager sharedManager] isFirstStart] == TRUE) {
+		NSLog(@"APP FIRST START ");
+		
+		// Load default settings
+		[[AppSettingsManager sharedManager] setDefaultNavigationControllerTintColor:[UIColor greenColor]];
+		[[AppSettingsManager sharedManager] setDefaultViewBackgroundColor:[UIColor yellowColor]];
+		[[AppSettingsManager sharedManager] setIsOrientationEnabled:NO];
+        
+        // Get setuped Language and set it to defaults
+        [AppLanguageClass setupLanguageForFirstStart];
+        
+        [Currency setAppCurrencyLocale:[[NSLocale currentLocale] localeIdentifier]];  
+        
+	}
+	
+    // Initialisiere Sprachdaten
+    [AppLanguageClass initialize];
+    
+	// Check if start is an update
+	if([[AppSettingsManager sharedManager] isUpdate] == TRUE) {
+		if(versionIDBeforeUpdate == 1001 && versionIDAfterUpdate == 1002) {
+			NSLog(@"UDATE FROM 1001 TO 1002");
+		}
+	}		
+}
+
 
 -(void) loadSplashView {
     splashView = [SplashView new];
@@ -67,48 +106,7 @@
 }
 
 
--(void) loadAppSettings {
-	
-	NSInteger versionIDBeforeUpdate = [[AppSettingsManager sharedManager] getVersionNumberBeforeUpdate];
-	[[AppSettingsManager sharedManager] setVersionNumber:@"1.0.03"];
-	NSInteger versionIDAfterUpdate = [[AppSettingsManager sharedManager] getIntegerVersionNumber];
-	
-	// Set if App is a full version
-	[[AppSettingsManager sharedManager] setIsProVersion:YES];
-	
-	// Check if apps starts the first time
-	if([[AppSettingsManager sharedManager] isFirstStart] == TRUE) {
-		NSLog(@" FIRST START ");
-		
-		// Load default settings
-		[[AppSettingsManager sharedManager] setDefaultNavigationControllerTintColor:[UIColor greenColor]];
-		[[AppSettingsManager sharedManager] setDefaultViewBackgroundColor:[UIColor yellowColor]];
-		[[AppSettingsManager sharedManager] setIsOrientationEnabled:NO];
-	}
-	
-	NSLog(@"%@",[[AppSettingsManager sharedManager] getVersionsList]);
-	NSLog(@"%@",[[AppSettingsManager sharedManager] getStringVersionNumber]);
-	
-	// Check if start is an update
-	if([[AppSettingsManager sharedManager] isUpdate] == TRUE) {
-		
-		if(versionIDBeforeUpdate == 1001 && versionIDAfterUpdate == 1002) {
-			NSLog(@"UDATE FROM 1001 TO 1002");
-		}
-		else if(versionIDBeforeUpdate == 1001 && versionIDAfterUpdate == 1003) {
-			NSLog(@"UDATE FROM 1001 TO 1003");
-		}
-		else if(versionIDBeforeUpdate == 1001 && versionIDAfterUpdate == 1004) {
-			NSLog(@"UDATE FROM 1001 TO 1004");
-		}				
-		else if(versionIDBeforeUpdate == 1002 && versionIDAfterUpdate == 1003) {
-			NSLog(@"UDATE FROM 1002 TO 1003");
-		}
-		else if(versionIDBeforeUpdate == 1002 && versionIDAfterUpdate == 1004) {
-			NSLog(@"UDATE FROM 1002 TO 1004");
-		}		
-	}		
-}
+
 
 
 -(void) onSlashScreenExpired {
@@ -131,6 +129,30 @@
     [categoriesView2 release];
     [categoriesView release];
     
+}
+
+
+-(void)applicationDidEnterBackground:(UIApplication *)application {
+    
+    UIBackgroundTaskIdentifier bgTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{}];
+    
+    NSLog(@"Wait until sqlite is done and ok");
+    
+    sqlite3 *database = [[Database sharedManager] getSqliteDatabase];
+    sqlite3_stmt *statement;
+    BOOL done = FALSE;
+    while (done == FALSE) {
+        NSString *query = @"SELECT * FROM TBLCategories WHERE 1";
+        if (sqlite3_prepare_v2(database, [query UTF8String], -1, &statement, nil) == SQLITE_OK) 
+        {
+            done = TRUE;
+        }
+    }
+    
+    NSLog(@"Done, go to background");
+    
+    
+    [[UIApplication sharedApplication] endBackgroundTask:bgTask];
 }
 
 

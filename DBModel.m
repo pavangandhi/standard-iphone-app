@@ -15,8 +15,8 @@
 + (NSArray *)tableColumns;
 - (void) checkTable;
 + (NSDictionary *)propertiesWithEncodedTypes;
-- (void) createTable;
-- (void) alterTable;
+- (BOOL) createTable;
+- (BOOL) alterTable;
 + (BOOL) executeUpdateQuery:(NSString*) s_query;
 -(void) createIndizes;
 @end
@@ -69,7 +69,7 @@
 }
 
 
--(void) alterTable {
+-(BOOL) alterTable {
     NSArray *tableColumns = [[self class] tableColumns];
     NSDictionary *theProps = [[self class]  propertiesWithEncodedTypes];
     
@@ -95,6 +95,7 @@
             if([[self class] executeUpdateQuery:executeSQL] == FALSE) {
                 if(debugging == YES) {
                     NSLog(@"ERROR: alter table: %@, SQL: %@", [self class],executeSQL);
+                    return FALSE;
                 }
             } else {
                 if(debugging == YES) {
@@ -102,12 +103,14 @@
                 }                
             }
         }
-    } 
+    }
+    
+    return TRUE;
 }
 
 
 
--(void) createTable {
+-(BOOL) createTable {
     NSDictionary *theProps = [[self class]  propertiesWithEncodedTypes];
     NSMutableString *createSQL = [NSMutableString stringWithFormat:@"CREATE TABLE IF NOT EXISTS %@ (pk INTEGER PRIMARY KEY",[[self class] tableName]];
     
@@ -136,12 +139,15 @@
     if([[self class] executeUpdateQuery:createSQL] == FALSE) {
         if(debugging == YES) {
             NSLog(@"ERROR: creating table: %@, SQL: %@", [self class],createSQL);
+            return FALSE;
         }
     } else {
         if(debugging == YES) {
             NSLog(@"SUCCESS: creating table: %@, SQL: %@", [self class],createSQL);
         }
     }
+    
+    return TRUE;
 }
 
 
@@ -352,14 +358,11 @@
 	if(pk < 0) return FALSE;
 
 	NSString *deleteQuery = @"";
-	if([[Database sharedManager] getSyncMode] == FALSE) {
-		deleteQuery = [NSString stringWithFormat:@"DELETE FROM %@ WHERE pk = %lld", [[self class] tableName], pk];
+
+	if([crud isEqualToString:syncCreate] || [[Database sharedManager] getSyncMode] == FALSE) {
+		deleteQuery = [NSString stringWithFormat:@"DELETE FROM %@ WHERE pk = %lld", [[self class] tableName], pk];		
 	} else {
-		if([crud isEqualToString:syncCreate]) {
-			deleteQuery = [NSString stringWithFormat:@"DELETE FROM %@ WHERE pk = %lld", [[self class] tableName], pk];		
-		} else {
-			deleteQuery = [NSString stringWithFormat:@"UPDATE %@ SET crud = '%@' WHERE pk = %lld", [[self class] tableName], syncDelete, pk];			
-		}
+		deleteQuery = [NSString stringWithFormat:@"UPDATE %@ SET crud = '%@' WHERE pk = %lld", [[self class] tableName], syncDelete, pk];			
 	}
 	
 	if (sqlite3_exec ([[self class] getDatabase], [deleteQuery UTF8String], NULL, NULL, NULL) != SQLITE_OK) {

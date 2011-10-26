@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "Database.h"
-#import "AppSettingsManager.h"
 #import "CategoriesView.h"
 #import "SplashView.h"
+#import "AppSettingsManager.h"
+#import "AppLanguageClass.h"
+#import "DCIntrospect.h"
+#import "Currency.h"
+#import "TBLCategories.h"
 
 @interface standard_iphone_appDelegate : NSObject <UIApplicationDelegate> {
 
