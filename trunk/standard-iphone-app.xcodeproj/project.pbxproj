@@ -384,13 +384,13 @@
 			name = Language;
 			sourceTree = "<group>";
 		};
-		04AC22FF14581B5000070D38 /* ListSelectionArray */ = {
+		04AC22FF14581B5000070D38 /* SelectionType */ = {
 			isa = PBXGroup;
 			children = (
 				04AC230014581B6300070D38 /* SelectionType.h */,
 				04AC230114581B6300070D38 /* SelectionType.m */,
 			);
-			name = ListSelectionArray;
+			name = SelectionType;
 			sourceTree = "<group>";
 		};
 		04AC230314581E7A00070D38 /* Currency */ = {
@@ -553,7 +553,7 @@
 				04AC22E11457F39400070D38 /* KeyChain */,
 				04AC22F41457FFD600070D38 /* Language */,
 				04AC230314581E7A00070D38 /* Currency */,
-				04AC22FF14581B5000070D38 /* ListSelectionArray */,
+				04AC22FF14581B5000070D38 /* SelectionType */,
 				043260FB1445F2B300EF7ACA /* UserDefaults */,
 			);
 			name = Classes;

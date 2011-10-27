@@ -120,9 +120,14 @@
 
 
 + (NSString *)deviceIdentifier {
-	return [[UIDevice currentDevice] uniqueIdentifier];
+    
+    NSString *uniqueID;
+    CFStringRef cfUuid = CFUUIDCreateString(NULL, CFUUIDCreate(NULL));
+    uniqueID = (NSString *)cfUuid;
+    CFRelease(cfUuid);
+    
+	return uniqueID;
 }
-
 
 
 @end

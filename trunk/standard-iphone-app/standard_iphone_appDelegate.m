@@ -122,7 +122,7 @@
     
     self.tabbarController = [[UITabBarController alloc] init];
     self.tabbarController.viewControllers = [NSArray arrayWithObjects:ncCategoriesView,ncCategoriesView2,nil];
-    [self.window addSubview:[self.tabbarController view]];
+    self.window.rootViewController = self.tabbarController;
     
     [ncCategoriesView release];
     [ncCategoriesView2 release];

@@ -26,7 +26,6 @@
 - (id)initWithStyle:(UITableViewStyle)style andNavi:(BOOL) n Toolbar:(BOOL) t CustomSearcbar:(BOOL) s {
 
     if (self == [super initWithFrame:CGRectMake(0, 0, [self getWidth], [self getHeightWithNavi:n Toolbar:t Searchbar:s Keyboard:NO]) style:style]) {
-        [self addKeyboardObserver];
         allSections = [[NSMutableArray alloc] init];
         currentSections = [[NSMutableArray alloc] init];
         searchBarSection = [ComplexTableSection new];
@@ -43,7 +42,6 @@
 
 
 -(void) showKeyboard {
-    isKeyboardOpen = YES;
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.5];
     [UIView setAnimationDelegate:self];
@@ -52,7 +50,7 @@
 }
 
 -(void) hideKeyboard {
-    isKeyboardOpen = NO;
+
     [self resetFrame];
 }
 
@@ -75,6 +73,7 @@
 
 - (void) searchBarSearchButtonClicked:(UISearchBar *)theSearchBar {
     if(debug == YES) NSLog(@"searchBarSearchButtonClicked");
+    isKeyboardOpen = NO;
     [theSearchBar setShowsCancelButton:NO animated:YES];
     [theSearchBar resignFirstResponder];
 }
@@ -83,17 +82,20 @@
 - (void)searchBarCancelButtonClicked:(UISearchBar *) searchBar {
     if(debug == YES) NSLog(@"searchBarCancelButtonClicked");
     [searchBar resignFirstResponder];
+    isKeyboardOpen = NO;
     [searchBar setShowsCancelButton:NO animated:YES];
 }
 
 - (void) searchBarTextDidBeginEditing:(UISearchBar *)theSearchBar {
     if(debug == YES) NSLog(@"searchBarTextDidBeginEditing");
+    isKeyboardOpen = YES;
     [theSearchBar setShowsCancelButton:YES animated:YES];
     [theSearchBar sizeToFit];
 }
 
 - (void)searchBar:(UISearchBar *)theSearchBar textDidChange:(NSString *)searchText {
     if(debug == YES) NSLog(@"searchbar textDidChange");
+    isKeyboardOpen = YES;
     [searchBarSection.currentCells removeAllObjects];
     [searchBarSection.allCells removeAllObjects];
     [self reloadData];
