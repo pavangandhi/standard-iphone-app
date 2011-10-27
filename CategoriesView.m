@@ -13,17 +13,39 @@
 
 @implementation CategoriesView
 
+
+-(NSString*) getStringFromNumber:(NSNumber*) number {
+    
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc]  init];
+    [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    [formatter setAlwaysShowsDecimalSeparator:YES];
+    [formatter setMaximumFractionDigits:8];
+    [formatter setMinimumFractionDigits:2];
+    
+    NSLocale *currentCurrency = [Currency getAppCurrencyLocale];
+    NSString *decimalSeparator = [currentCurrency objectForKey:@"NSLocaleDecimalSeparator"];
+    NSString *groupingSeparator = [currentCurrency objectForKey:@"NSLocaleGroupingSeparator"];
+    
+    [formatter setGroupingSeparator:groupingSeparator];
+    [formatter setDecimalSeparator:decimalSeparator];
+    NSString *sNumber = [NSString stringWithFormat:@"%@ BTC",[formatter stringFromNumber:number]];
+    [formatter release];
+    
+    return sNumber;
+}
+
 -(void) loadView {
 	
 	
     [super loadView];
+
     [self createTable];
     self.title = @"Test";
 	
     float zahl = 12.5;
     NSLog(@"%@",[Currency stringFromFloat:zahl]);
     
-    NSString *zahl2 = @"12.50";
+    NSString *zahl2 = @"12,50";
     NSLog(@"%f",[Currency floatFromString:zahl2]);
     
     
