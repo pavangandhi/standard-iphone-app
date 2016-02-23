@@ -1,0 +1,1 @@
+This project is an template for iphone apps.
